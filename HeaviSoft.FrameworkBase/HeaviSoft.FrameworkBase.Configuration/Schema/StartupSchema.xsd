@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StartupSchema"
+    targetNamespace="http://tempuri.org/StartupSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/StartupSchema.xsd"
+    xmlns:mstns="http://tempuri.org/StartupSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>应用程序启动流程配置</xs:documentation>
+  </xs:annotation>
+  <xs:attribute name="Name" type="xs:string"></xs:attribute>
+  <xs:attribute name="Type" type="xs:string"></xs:attribute>
+  <xs:element name="Add">
+    <xs:complexType>
+      <xs:attribute ref="Name"></xs:attribute>
+      <xs:attribute ref="Type"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResourceModules">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Add" minOccurs="0"></xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginModules">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Add" minOccurs="0"></xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticationModules">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Add" minOccurs="0"></xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizationModules">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Add" minOccurs="0"></xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecutionModules">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Add" minOccurs="0"></xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="Startup.Modules">
+    <xs:annotation>
+      <xs:documentation>启动流程集合</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ResourceModules" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="LoginModules" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="AuthenticationModules" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="AuthorizationModules" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="ExecutionModules" maxOccurs="1" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Startup">
+    <xs:annotation>
+      <xs:documentation>根节点</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Startup.Modules"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

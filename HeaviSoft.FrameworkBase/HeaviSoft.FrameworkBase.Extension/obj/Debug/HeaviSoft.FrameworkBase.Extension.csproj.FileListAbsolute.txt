@@ -1,0 +1,4 @@
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Extension.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Extension.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Extension\obj\Debug\HeaviSoft.FrameworkBase.Extension.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Extension\obj\Debug\HeaviSoft.FrameworkBase.Extension.pdb

@@ -1,0 +1,14 @@
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Client.exe.config
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\Config\Applicaition.xml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\Config\Startup.xml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Client.exe
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Client.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Core.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Extension.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Core.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Extension.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.csprojResolveAssemblyReference.cache
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.Properties.Resources.resources
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.csproj.GenerateResource.Cache
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.exe
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.pdb

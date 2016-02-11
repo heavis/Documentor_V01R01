@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ApplicationSchema"
+    targetNamespace="http://tempuri.org/ApplicationSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/ApplicationSchema.xsd"
+    xmlns:mstns="http://tempuri.org/ApplicationSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:annotation>
+    <xs:documentation>本文档定义Application环境配置</xs:documentation>
+  </xs:annotation>
+  <xs:attribute name="Name" type="xs:string"></xs:attribute>
+  <xs:attribute name="Value" type="xs:string"></xs:attribute>
+  <xs:element name="Attr">
+    <xs:complexType>
+      <xs:attribute ref="Name"></xs:attribute>
+      <xs:attribute ref="Value"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Attributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Attr" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Application">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Attributes" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

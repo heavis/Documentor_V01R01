@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Startup xmlns="http://tempuri.org/StartupSchema.xsd"
+xmlns:xsi="http://tempuri.org/StartupSchema.xsd">
+  <Startup.Modules>
+    <ResourceModules>
+    </ResourceModules>
+    <LoginModules>
+    </LoginModules>
+    <AuthenticationModules>
+    </AuthenticationModules>
+    <AuthorizationModules>
+    </AuthorizationModules>
+    <ExecutionModules>
+    </ExecutionModules>
+  </Startup.Modules>
+</Startup>
