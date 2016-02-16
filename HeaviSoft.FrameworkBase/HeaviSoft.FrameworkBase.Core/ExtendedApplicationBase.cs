@@ -13,12 +13,15 @@ namespace HeaviSoft.FrameworkBase.Core
     /// </summary>
     public abstract class ExtendedApplicationBase : Application
     {
+        public readonly string PROPERTY_ACCOUNT = "ExtendedApplicationBase_Account";
+        public readonly string PROPERTY_PASSWORD = "ExtendedApplicationBase_Password";
+
         /// <summary>
         /// 当前应用实例
         /// </summary>
         public static ExtendedApplicationBase Current { get; set; }
 
-        public ExtendedApplicationBase()
+        public ExtendedApplicationBase() : base()
         {
             ThemeResourceModules = new List<IThemeResourceModule>();
             LanguageResourceMudules = new List<ILanguageResourceModule>();
@@ -66,14 +69,22 @@ namespace HeaviSoft.FrameworkBase.Core
                 return false;
             if (!ExecuteLoginModulesCore())
                 return false;
-            if (!ExecuteAutheticationModulesCore())
-                return false;
+            //if (!ExecuteAutheticationModulesCore())
+            //   return false;
             if (!ExecuteAuthorizationModulesCore())
                 return false;
             if (!ExecuteExecutionModulesCore())
                 return false;
 
             return true;
+        }
+
+        /// <summary>
+        /// 关闭系统
+        /// </summary>
+        public virtual void ExitEx()
+        {
+            Environment.Exit(0);
         }
 
         /// <summary>
@@ -97,7 +108,7 @@ namespace HeaviSoft.FrameworkBase.Core
         /// 执行身份验证
         /// </summary>
         /// <returns></returns>
-        protected abstract bool ExecuteAutheticationModulesCore();
+        public abstract bool ExecuteAutheticationModulesCore();
         /// <summary>
         /// 执行身份授权
         /// </summary>

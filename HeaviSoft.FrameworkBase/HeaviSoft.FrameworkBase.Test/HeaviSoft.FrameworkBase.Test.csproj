@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A308F46A-539E-4DE2-BBF2-436E959B55C4}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HeaviSoft.FrameworkBase.Test</RootNamespace>
     <AssemblyName>HeaviSoft.FrameworkBase.Test</AssemblyName>
@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\HeaviSoft.FrameworkBase.Client\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,6 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,17 +53,30 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <Page Include="AuthenticationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="AuthenticationWindow.xaml.cs">
+      <DependentUpon>AuthenticationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Implemnents\AuthenticationModule.cs" />
+    <Compile Include="Implemnents\ExeutionModule.cs" />
+    <Compile Include="Implemnents\Identity.cs" />
+    <Compile Include="Implemnents\LoginModule.cs" />
+    <Compile Include="Implemnents\Principal.cs" />
+    <Compile Include="Implemnents\ThemeModule.cs" />
+    <Compile Include="Implemnents\UserWorkRequest.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -92,7 +108,25 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Component\HeaviSoft.FrameworkBase.Component.csproj">
+      <Project>{30b273d0-a8ff-4b33-be79-6182d30148f1}</Project>
+      <Name>HeaviSoft.FrameworkBase.Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Core\HeaviSoft.FrameworkBase.Core.csproj">
+      <Project>{90dcb904-05e1-41ba-ab02-3702914e4745}</Project>
+      <Name>HeaviSoft.FrameworkBase.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Extension\HeaviSoft.FrameworkBase.Extension.csproj">
+      <Project>{2323cf48-a231-4969-844a-2a06dca559b1}</Project>
+      <Name>HeaviSoft.FrameworkBase.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Utility\HeaviSoft.FrameworkBase.Utility.csproj">
+      <Project>{2644b5ae-4ff1-4e61-86d0-8627616f69f8}</Project>
+      <Name>HeaviSoft.FrameworkBase.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

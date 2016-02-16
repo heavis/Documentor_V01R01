@@ -1,0 +1,16 @@
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\bin\Debug\HeaviSoft.Documentor.Presentation.Login.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\bin\Debug\HeaviSoft.Documentor.Presentation.Login.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login.csprojResolveAssemblyReference.cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login_MarkupCompile.cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login_MarkupCompile.lref
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login.g.resources
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login.Properties.Resources.resources
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login.csproj.GenerateResource.Cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\HeaviSoft.Documentor.Presentation.Login.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Presentation.Login.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Presentation.Login.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\LoginWindow.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\LoginWindow.baml
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\MainWindow.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\obj\Debug\MainWindow.baml

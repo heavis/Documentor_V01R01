@@ -56,6 +56,8 @@
     <Compile Include="Module\IResourceModule.cs" />
     <Compile Include="Module\IThemeResourceModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\DefaultIdentity.cs" />
+    <Compile Include="Security\DefaultPrincipal.cs" />
     <Compile Include="Security\IIdentity.cs" />
     <Compile Include="Security\IPrincipal.cs" />
   </ItemGroup>

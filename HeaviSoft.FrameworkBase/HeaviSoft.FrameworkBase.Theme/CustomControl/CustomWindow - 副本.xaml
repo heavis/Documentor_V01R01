@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HeaviSoft.FrameworkBase.Theme">
+    <ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="Window_Titlebar_ButtonStyle" TargetType="{x:Type ButtonBase}">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="BorderThickness" Value="0" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderThickness" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              RecognizesAccessKey="True" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="ResizeMode" Value="NoResize" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Border x:Name="MainBorder" Background="{DynamicResource CustomControlBackground}" CornerRadius="6" BorderThickness="1" >
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="{DynamicResource CustomControlBorderBrush}"/>
+                        </Border.BorderBrush>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="1" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Panel.ZIndex="101"  x:Name="PART_TITLEBAR" BorderThickness="0" CornerRadius="6, 6, 0, 0" Background="{DynamicResource Window_TitleBar_Background}">
+                                <DockPanel  LastChildFill="False" >
+                                    <Image DockPanel.Dock="Left" Source="{TemplateBinding Icon}" />
+                                    <Button x:Name="PART_CLOSE" Style="{DynamicResource Window_Titlebar_ButtonStyle}" DockPanel.Dock="Right">
+                                        <Image x:Name="c" Margin="3, 0" DockPanel.Dock="Right" Width="24" Height="24" Source="close.png"   />
+                                    </Button>
+                                    <Button x:Name="PART_MAXIMIZE_RESTORE"  Style="{DynamicResource Window_Titlebar_ButtonStyle}" DockPanel.Dock="Right">
+                                        <Image Name="MaximizeRestoreImage" Margin="3, 0" DockPanel.Dock="Right" Width="24" Height="24" Source="maximum.png"  />
+                                    </Button>
+                                    <Button x:Name="PART_MINIMIZE" Style="{DynamicResource Window_Titlebar_ButtonStyle}" DockPanel.Dock="Right">
+                                        <Image Margin="3, 0" DockPanel.Dock="Right" Width="24" Height="24" Source="min.png" RenderTransformOrigin="0.5,0.5"  >
+                                        </Image>
+                                    </Button>
+                                </DockPanel>
+                            </Border>
+                            <Border BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1" Grid.Row="1" />
+                            <ContentPresenter Grid.Row="2" Margin="8, 5" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Maximized}" Value="True">
+                            <Setter TargetName="MaximizeRestoreImage" Property="Source" Value="{DynamicResource Window_Button_Maximum_ImageBrush}" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="Window" BasedOn="{StaticResource WindowStyle}" />
+</ResourceDictionary>

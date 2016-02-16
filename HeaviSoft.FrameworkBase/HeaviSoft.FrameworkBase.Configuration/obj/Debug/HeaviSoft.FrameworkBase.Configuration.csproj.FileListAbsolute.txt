@@ -2,3 +2,4 @@ E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\Heavi
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Configuration.pdb
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Configuration\obj\Debug\HeaviSoft.FrameworkBase.Configuration.dll
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Configuration\obj\Debug\HeaviSoft.FrameworkBase.Configuration.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Configuration\obj\Debug\HeaviSoft.FrameworkBase.Configuration.csprojResolveAssemblyReference.cache

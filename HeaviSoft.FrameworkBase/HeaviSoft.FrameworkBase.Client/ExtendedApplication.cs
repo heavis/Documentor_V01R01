@@ -5,6 +5,7 @@ using HeaviSoft.FrameworkBase.Extension;
 using HeaviSoft.FrameworkBase.Utility.Log;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -18,6 +19,12 @@ namespace HeaviSoft.FrameworkBase.Client
     /// </summary>
     internal class ExtendedApplication : ExtendedApplicationBase
     {
+        public ExtendedApplication() : base()
+        {
+            ShutdownMode = ShutdownMode.OnExplicitShutdown; 
+        }
+
+        #region 系统事件
         /// <summary>
         /// 流程启动
         /// </summary>
@@ -34,6 +41,7 @@ namespace HeaviSoft.FrameworkBase.Client
                 if (!this.ExecuteSteps())
                 {
                     //步骤未执行成功
+                    throw new StartupException("Error occured when Initializing application.");
                 }
             }
             catch (Exception ex)
@@ -61,10 +69,14 @@ namespace HeaviSoft.FrameworkBase.Client
             {
                 //启动异常提示
             }
-            else if(e.Exception is  {
-               //中断异常提示
+            else if (e.Exception is FatalException)
+            {
+                //中断异常提示
             }
-
+            else
+            {
+                //其他异常
+            }
         }
 
         /// <summary>
@@ -75,7 +87,7 @@ namespace HeaviSoft.FrameworkBase.Client
         {
         }
 
-
+        #endregion
 
         #region 父类抽象方法实现
         public override void BuildSteps()
@@ -84,34 +96,34 @@ namespace HeaviSoft.FrameworkBase.Client
             if (!startupRoot.IsNull())
             {
                 //加载ResourceModules
-                var resourcesTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_ResourceModules, ConfigurationHelper.Config_Node_Operation });
+                var resourcesTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_ResourceModules, ConfigurationHelper.Config_Node_Operation });
                 var resourceModules = new List<IResourceModule>();
                 foreach (var type in resourcesTypes)
                 {
                     resourceModules.Add(CreateInstanceByType<IResourceModule>(type));
                 }
-                this.ThemeResourceModules.AddRange(resourceModules.Cast<IThemeResourceModule>());
-                this.LanguageResourceMudules.AddRange(resourceModules.Cast<ILanguageResourceModule>());
+                this.ThemeResourceModules.AddRange(resourceModules.Where(res => res is IThemeResourceModule).Cast<IThemeResourceModule>());
+                this.LanguageResourceMudules.AddRange(resourceModules.Where(res => res is ILanguageResourceModule).Cast<ILanguageResourceModule>());
                 //加载LoginModules
-                var loginTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_LoginModules, ConfigurationHelper.Config_Node_Operation });
+                var loginTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_LoginModules, ConfigurationHelper.Config_Node_Operation });
                 foreach (var type in loginTypes)
                 {
                     this.LoginModules.Add(CreateInstanceByType<ILoginModule>(type));
                 }
                 //加载AuthenticationModules
-                var authenticationTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_AuthenticationModules, ConfigurationHelper.Config_Node_Operation });
+                var authenticationTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_AuthenticationModules, ConfigurationHelper.Config_Node_Operation });
                 foreach (var type in authenticationTypes)
                 {
                     this.AuthenticationModules.Add(CreateInstanceByType<IAuthenticationModule>(type));
                 }
                 //加载AutorizationModules
-                var authorizationTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_AuthorizationModules, ConfigurationHelper.Config_Node_Operation });
-                foreach (var type in authenticationTypes)
+                var authorizationTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_AuthorizationModules, ConfigurationHelper.Config_Node_Operation });
+                foreach (var type in authorizationTypes)
                 {
                     this.AuthorizationModules.Add(CreateInstanceByType<IAuthorizationModule>(type));
                 }
                 //加载执行流程
-                var executionTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_ExecutionModules, ConfigurationHelper.Config_Node_Operation });
+                var executionTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_ExecutionModules, ConfigurationHelper.Config_Node_Operation });
                 foreach (var type in executionTypes)
                 {
                     this.ExecutionModules.Add(CreateInstanceByType<IExecutionModule>(type));
@@ -122,17 +134,17 @@ namespace HeaviSoft.FrameworkBase.Client
         protected override bool ExecuteThemeResourceModulesCore()
         {
             //加载主题资源
-            foreach(var module in ThemeResourceModules)
+            foreach (var module in ThemeResourceModules)
             {
-                if(!module.Loading(this, Context.CurrentTheme))
+                if (!module.Loading(this, Context.CurrentTheme))
                 {
                     throw new StartupException("Error occured when loading theme resource.");
                 }
             }
             //主题资源加载完成
-            foreach(var module in ThemeResourceModules)
+            foreach (var module in ThemeResourceModules)
             {
-                if(!module.Loaded(this, Context.CurrentTheme))
+                if (!module.Loaded(this, Context.CurrentTheme))
                 {
                     throw new StartupException("Error occured when loaded theme resource.");
                 }
@@ -163,13 +175,18 @@ namespace HeaviSoft.FrameworkBase.Client
 
         protected override bool ExecuteLoginModulesCore()
         {
-            foreach(var login in LoginModules)
+            foreach (var login in LoginModules)
             {
                 try
                 {
-                    login.Login(this);
+                    if (!login.Login(this))
+                    {
+                        //取消了登录，直接退出系统
+                        //Shutdown();
+                        ExitEx();
+                    }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw new StartupException("Error occured when loading login module.", ex);
                 }
@@ -178,11 +195,12 @@ namespace HeaviSoft.FrameworkBase.Client
             return true;
         }
 
-        protected override bool ExecuteAutheticationModulesCore()
+        public override bool ExecuteAutheticationModulesCore()
         {
             var result = true;
             var message = "Authenticating user is successed.";
-            foreach(var auth in AuthenticationModules)
+            //执行认证
+            foreach (var auth in AuthenticationModules)
             {
                 if (!auth.Authenticate(this))
                 {
@@ -191,10 +209,11 @@ namespace HeaviSoft.FrameworkBase.Client
                     break;
                 }
             }
-            //用户认证失败
+            //用户认证失败,判断是否需要重新启动登录
             if (!result)
             {
-                foreach(var login in LoginModules)
+                //是否需要重新登陆
+                foreach (var login in LoginModules)
                 {
                     login.LoginFailed(this, message);
                 }
@@ -202,7 +221,8 @@ namespace HeaviSoft.FrameworkBase.Client
             //用户认证成功
             else
             {
-                foreach (var login in LoginModules) {
+                foreach (var login in LoginModules)
+                {
                     login.LoginSuccessed(this, message);
                 }
             }
@@ -212,13 +232,33 @@ namespace HeaviSoft.FrameworkBase.Client
 
         protected override bool ExecuteAuthorizationModulesCore()
         {
+            //授权之前检查用户是否验证通过
+            if (!Context.User.Identity.IsAuthenticated)
+            {
+                Logger.Info("User must be autenticated before executing authorizationModule.");
+                return false;
+            }
             //用户授权操作
+            foreach(var autor in AuthorizationModules)
+            {
+                if (!autor.Authorize(this))
+                {
+                    Logger.Info("User authorizate failed.");
+                    return false;
+                }
+            }
+
             return true;
         }
 
         protected override bool ExecuteExecutionModulesCore()
         {
-            //加载数据
+            //加载数据s
+            foreach(var excute in ExecutionModules)
+            {
+                excute.Execute(this);
+            }
+
             return true;
         }
 
@@ -230,15 +270,24 @@ namespace HeaviSoft.FrameworkBase.Client
             try
             {
                 var array = typeInfo.Split(',');
-                var instance = Assembly.LoadFrom(string.Format("{0}.dll", array[1])).CreateInstance(array[0]);
+                object instance = null;
+                try
+                {
+                    instance = Assembly.LoadFrom(string.Format("{0}.dll", array[1].Trim())).CreateInstance(array[0].Trim());
+                }
+                catch(FileNotFoundException)
+                {
+                    instance = Assembly.LoadFrom(string.Format("{0}.exe", array[1].Trim())).CreateInstance(array[0].Trim());
+                }
+
                 return (T)instance;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw new StartupException(ex);
+                throw new StartupException(string.Format("Error occured when executing CreateInstanceByType method, parameter:{0}", typeInfo), ex);
             }
         }
-      
+
         #endregion
 
     }

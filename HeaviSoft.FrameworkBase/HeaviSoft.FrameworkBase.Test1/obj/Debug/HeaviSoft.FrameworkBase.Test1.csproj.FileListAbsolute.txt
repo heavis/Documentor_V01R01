@@ -1,0 +1,16 @@
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\bin\Debug\HeaviSoft.FrameworkBase.Test1.exe.config
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\bin\Debug\HeaviSoft.FrameworkBase.Test1.exe
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\bin\Debug\HeaviSoft.FrameworkBase.Test1.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\MainWindow.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1_MarkupCompile.cache
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1_MarkupCompile.lref
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\MainWindow.baml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1.g.resources
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1.Properties.Resources.resources
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1.csproj.GenerateResource.Cache
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1.exe
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\TestCustomWindow.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\TestCustomWindow.baml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\Themes\Generic.baml

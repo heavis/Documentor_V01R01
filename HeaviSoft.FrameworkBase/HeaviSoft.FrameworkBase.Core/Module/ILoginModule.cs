@@ -15,7 +15,8 @@ namespace HeaviSoft.FrameworkBase.Core.Module
         /// 登录接口
         /// </summary>
         /// <param name="app">应用对象</param>
-        void Login(ExtendedApplicationBase app);
+        /// <returns>返回登陆操作状态</returns>
+        bool Login(ExtendedApplicationBase app);
         /// <summary>
         /// 登录成功
         /// </summary>

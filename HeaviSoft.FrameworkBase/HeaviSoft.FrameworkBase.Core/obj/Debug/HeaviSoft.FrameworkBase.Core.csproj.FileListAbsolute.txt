@@ -1,5 +1,5 @@
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Core.dll
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Core.pdb
-E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Core\obj\Debug\HeaviSoft.FrameworkBase.Core.csprojResolveAssemblyReference.cache
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Core\obj\Debug\HeaviSoft.FrameworkBase.Core.dll
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Core\obj\Debug\HeaviSoft.FrameworkBase.Core.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Core\obj\Debug\HeaviSoft.FrameworkBase.Core.csprojResolveAssemblyReference.cache

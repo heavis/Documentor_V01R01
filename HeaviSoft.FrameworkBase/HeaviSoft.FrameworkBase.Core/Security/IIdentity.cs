@@ -9,6 +9,6 @@ namespace HeaviSoft.FrameworkBase.Core.Security
     public interface IIdentity
     {
         bool IsAuthenticated { get; }
-        string Name { get; set; }
+        string Name { get; }
     }
 }

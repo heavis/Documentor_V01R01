@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HeaviSoft.FrameworkBase.Theme">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/ColorBrush.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/Button.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/Text.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/TextBox.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/CustomWindow.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

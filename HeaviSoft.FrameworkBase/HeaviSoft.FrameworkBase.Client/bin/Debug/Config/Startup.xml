@@ -3,15 +3,18 @@
 xmlns:xsi="http://tempuri.org/StartupSchema.xsd">
   <Startup.Modules>
     <ResourceModules>
-      <Add xsi:Type="HeaviSoft.FrameworkBase.Test.ThemeModule, HeaviSoft.FrameworkBase.Test"/>
+      <Add xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.ThemeModule, HeaviSoft.FrameworkBase.Test"/>
     </ResourceModules>
     <LoginModules>
+      <Add xsi:Name="LoginModule" xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.LoginModule,HeaviSoft.FrameworkBase.Test"/>
     </LoginModules>
     <AuthenticationModules>
+      <Add xsi:Name="AuthenticationModule" xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.AuthenticationModule, HeaviSoft.FrameworkBase.Test"  />
     </AuthenticationModules>
     <AuthorizationModules>
     </AuthorizationModules>
     <ExecutionModules>
+      <Add xsi:Name="ExecutionModule" xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.ExeutionModule, HeaviSoft.FrameworkBase.Test"/>
     </ExecutionModules>
   </Startup.Modules>
 </Startup>

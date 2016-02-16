@@ -1,10 +1,12 @@
 ﻿using HeaviSoft.FrameworkBase.Extension;
+using HeaviSoft.FrameworkBase.Utility.Log;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace HeaviSoft.FrameworkBase.Client
@@ -14,6 +16,7 @@ namespace HeaviSoft.FrameworkBase.Client
         internal const string Config_File_Application = "Config/Application.xml";
         internal const string Config_File_Startup = "Config/Startup.xml";
 
+        internal const string Config_Node_Modules = "Startup.Modules";
         internal const string Config_Node_ResourceModules = "ResourceModules";
         internal const string Config_Node_LoginModules = "LoginModules";
         internal const string Config_Node_AuthenticationModules = "AuthenticationModules";
@@ -41,6 +44,7 @@ namespace HeaviSoft.FrameworkBase.Client
             catch (Exception ex)
             {
                 //写日志
+                Logger.Error("Error occured when loading xml file: " + filePath, ex);
                 return null;
             }
         }

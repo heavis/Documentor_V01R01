@@ -12,3 +12,11 @@ E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Clie
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.csproj.GenerateResource.Cache
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.exe
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\obj\Debug\HeaviSoft.FrameworkBase.Client.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Utility.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\log4net.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\bin\Debug\HeaviSoft.FrameworkBase.Utility.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\Bin\HeaviSoft.FrameworkBase.Client.exe.config
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\Bin\Config\Applicaition.xml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\Bin\Config\Startup.xml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\Bin\HeaviSoft.FrameworkBase.Client.exe
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\Bin\HeaviSoft.FrameworkBase.Client.pdb

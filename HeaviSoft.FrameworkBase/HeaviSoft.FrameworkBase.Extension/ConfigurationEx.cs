@@ -26,12 +26,11 @@ namespace HeaviSoft.FrameworkBase.Extension
             try
             {
                 var childElement = parent;
-                for(var i = 0; i < eleLayouts.Length; i++)
+                for(var i = 0; i < eleLayouts.Length - 1; i++)
                 {
-                    childElement = childElement.Element(eleLayouts[i]);
+                       childElement = childElement.Elements().FirstOrDefault(el => el.Name.LocalName == eleLayouts[i]);
                 }
-
-                list.AddRange(childElement.Elements().Select(xle => xle.Attribute("Type").Value).ToList());
+                list.AddRange(childElement.Elements().Where(el => el.Name.LocalName == eleLayouts[eleLayouts.Length - 1]).Select(xle => xle.Attributes().FirstOrDefault(at => at.Name.LocalName == "Type").Value).ToList());
                 return list;
             }
             catch (Exception ex)

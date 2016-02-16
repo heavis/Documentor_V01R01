@@ -1,0 +1,14 @@
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\bin\Debug\HeaviSoft.FrameworkBase.Component.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\bin\Debug\HeaviSoft.FrameworkBase.Component.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component.Properties.Resources.resources
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component.csproj.GenerateResource.Cache
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Component.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Component.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component_MarkupCompile.cache
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component_MarkupCompile.lref
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\Themes\Generic.baml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component.g.resources
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Component\obj\Debug\HeaviSoft.FrameworkBase.Component.csprojResolveAssemblyReference.cache

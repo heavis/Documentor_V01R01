@@ -1,0 +1,10 @@
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Theme.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Theme.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\HeaviSoft.Documentor.Theme.csprojResolveAssemblyReference.cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\HeaviSoft.Documentor.Theme_MarkupCompile.cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\HeaviSoft.Documentor.Theme_MarkupCompile.lref
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\Themes\Generic.baml
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\Themes\GrayWhite\ColorBrush.baml
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\HeaviSoft.Documentor.Theme.g.resources
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\HeaviSoft.Documentor.Theme.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Theme\obj\Debug\HeaviSoft.Documentor.Theme.pdb

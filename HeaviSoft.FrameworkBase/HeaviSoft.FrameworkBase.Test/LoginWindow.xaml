@@ -1,0 +1,27 @@
+﻿<custom:CustomWindow x:Class="HeaviSoft.FrameworkBase.Test.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:custom="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component"
+        mc:Ignorable="d" Style="{DynamicResource WindowStyle}" Icon="Images/Logos.png"
+        Title="Login" Height="200" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center">
+            <Label Margin="5, 0" Content="Account:" />
+            <TextBox Name="TBoxAccount" Width="100" />
+            <Label Margin="5, 0" Content="Password: " />
+            <PasswordBox Margin="5, 0" Name="TBoxPassword" Width="100" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
+            <Button Margin="5, 0" Name="BtnSubmit" Click="BtnSubmit_Click" Content="Submit" />
+            <Button Margin="5, 0" Name="BtnCancel" Click="BtnCancel_Click" Content="Cancel" />
+        </StackPanel>
+    </Grid>
+</custom:CustomWindow>

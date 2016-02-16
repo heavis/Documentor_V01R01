@@ -13,8 +13,50 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Domain", "03-Domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Infrastracture", "05-Infrastracture", "{418E00A5-E452-4C7C-96C6-3056324A0612}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-CrossCuting", "1-CrossCuting", "{D6DFF1BC-3600-4BAE-9E4B-535B0548515B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Persistence", "2-Persistence", "{8C9A8B92-5FBA-4A0D-9C2C-F608414A81B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.Documentor.Theme", "HeaviSoft.Documentor.Theme\HeaviSoft.Documentor.Theme.csproj", "{42800790-1225-4104-8F68-AD871BC3C7DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.Documentor.Language", "HeaviSoft.Documentor.Language\HeaviSoft.Documentor.Language.csproj", "{EFBBB791-4153-4FFD-8664-74759DEA3A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.Documentor.Presentation.Login", "HeaviSoft.Documentor.Presentation.Login\HeaviSoft.Documentor.Presentation.Login.csproj", "{301B8F18-CAF1-4F4E-86C7-6DA909246ED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.Documentor.Presentation.Docking", "HeaviSoft.Documentor.Presentation.Docking\HeaviSoft.Documentor.Presentation.Docking.csproj", "{9547668D-4C4A-4C63-B91D-48C0987AF8E8}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42800790-1225-4104-8F68-AD871BC3C7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42800790-1225-4104-8F68-AD871BC3C7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42800790-1225-4104-8F68-AD871BC3C7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42800790-1225-4104-8F68-AD871BC3C7DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFBBB791-4153-4FFD-8664-74759DEA3A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFBBB791-4153-4FFD-8664-74759DEA3A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFBBB791-4153-4FFD-8664-74759DEA3A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFBBB791-4153-4FFD-8664-74759DEA3A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{301B8F18-CAF1-4F4E-86C7-6DA909246ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{301B8F18-CAF1-4F4E-86C7-6DA909246ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{301B8F18-CAF1-4F4E-86C7-6DA909246ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{301B8F18-CAF1-4F4E-86C7-6DA909246ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9547668D-4C4A-4C63-B91D-48C0987AF8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9547668D-4C4A-4C63-B91D-48C0987AF8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9547668D-4C4A-4C63-B91D-48C0987AF8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9547668D-4C4A-4C63-B91D-48C0987AF8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6DFF1BC-3600-4BAE-9E4B-535B0548515B} = {418E00A5-E452-4C7C-96C6-3056324A0612}
+		{8C9A8B92-5FBA-4A0D-9C2C-F608414A81B8} = {418E00A5-E452-4C7C-96C6-3056324A0612}
+		{42800790-1225-4104-8F68-AD871BC3C7DA} = {D6DFF1BC-3600-4BAE-9E4B-535B0548515B}
+		{EFBBB791-4153-4FFD-8664-74759DEA3A20} = {D6DFF1BC-3600-4BAE-9E4B-535B0548515B}
+		{301B8F18-CAF1-4F4E-86C7-6DA909246ED7} = {12C6FBFB-D7F6-4EFF-9E16-FC765155B84B}
+		{9547668D-4C4A-4C63-B91D-48C0987AF8E8} = {12C6FBFB-D7F6-4EFF-9E16-FC765155B84B}
 	EndGlobalSection
 EndGlobal

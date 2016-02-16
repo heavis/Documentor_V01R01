@@ -12,6 +12,11 @@ namespace HeaviSoft.FrameworkBase.Core
     /// </summary>
     public class AppContext
     {
+        public AppContext()
+        {
+            User = new DefaultPrincipal(new DefaultIdentity());
+        }
+
         public IPrincipal User { get; set; }
 
         public string CurrentTheme { get; set; }
