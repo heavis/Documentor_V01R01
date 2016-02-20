@@ -1,0 +1,77 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component">
+    <Style x:Key="CustomMessageBoxStyle" TargetType="{x:Type control:CustomMessageBox}">
+        <!--<Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="AllowsTransparency" Value="True" />-->
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="ResizeMode" Value="NoResize" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type control:CustomMessageBox}">
+                    <Border x:Name="MainBorder" CornerRadius="5" Background="{DynamicResource CustomControlBackground}" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="1" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid x:Name="PART_TITLEBAR" Grid.Row="0" Background="{DynamicResource Window_TitleBar_Background}">
+                                <Label x:Name="PART_TITLEBAR_TITLE" HorizontalContentAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource TitleStyle}" Content="{TemplateBinding Title}" />
+                            </Grid>
+                            <Border Grid.Row="1" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1" />
+                            <Grid Grid.Row="2" Margin="15, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="PART_IMAGETIP" Grid.Column="0" Width="40" Height="40" Source="../Themes/GrayWhite/Images/MessageBox/info.png"></Image>
+                                <TextBlock x:Name="PART_CONTENT" FontSize="14" Text="" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                </TextBlock>
+                            </Grid>
+                            <ContentControl x:Name="PART_BUTTONPANEL"  Grid.Row="3" >
+                                <StackPanel Margin="15, 5" Orientation="Horizontal" HorizontalAlignment="Right" >
+                                    <Button x:Name="PART_BUTTON_OK" Visibility="Collapsed" IsDefault="True" Style="{DynamicResource DefaultButtonStyle}" Margin="0, 0, 5, 0" Content="Ok" Width="100" HorizontalAlignment="Center">
+                                    </Button>
+                                    <Button x:Name="PART_BUTTON_YES" Visibility="Collapsed" IsDefault="True" Style="{DynamicResource DefaultButtonStyle}" Margin="0, 0, 5, 0" Content="Yes" Width="100">
+                                    </Button>
+                                    <Button x:Name="PART_BUTTON_NO" Visibility="Collapsed" Content="No" Width="100" Margin="0, 0, 5, 0">
+                                    </Button>
+                                    <Button x:Name="PART_BUTTON_CANCEL" Visibility="Collapsed" Content="Cancel" Width="100" Margin="0, 0, 5, 0">
+                                    </Button>
+                                </StackPanel>
+                            </ContentControl>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Ok -->
+                        <Trigger Property="MessageBoxButton" Value="Ok">
+                            <Setter TargetName="PART_BUTTON_OK" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <!-- OkCancel -->
+                        <Trigger Property="MessageBoxButton" Value="OkCancel">
+                            <Setter TargetName="PART_IMAGETIP" Property="Source" Value="../Themes/GrayWhite/Images/MessageBox/question.png" />
+                            <Setter TargetName="PART_BUTTON_OK" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PART_BUTTON_CANCEL" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <!-- YesNo-->
+                        <Trigger Property="MessageBoxButton"  Value="YesNo">
+                            <Setter TargetName="PART_IMAGETIP" Property="Source" Value="../Themes/GrayWhite/Images/MessageBox/question.png" />
+                            <Setter TargetName="PART_BUTTON_YES" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PART_BUTTON_NO" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <!-- YesNoCancel -->
+                        <Trigger Property="MessageBoxButton"  Value="YesNoCancel">
+                            <Setter TargetName="PART_IMAGETIP" Property="Source" Value="../Themes/GrayWhite/Images/MessageBox/question.png" />
+                            <Setter TargetName="PART_BUTTON_YES" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PART_BUTTON_NO" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PART_BUTTON_CANCEL" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type control:CustomMessageBox}" BasedOn="{StaticResource CustomMessageBoxStyle}" />
+</ResourceDictionary>

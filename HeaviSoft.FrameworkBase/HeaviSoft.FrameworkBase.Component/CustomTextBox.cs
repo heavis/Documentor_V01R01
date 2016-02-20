@@ -16,44 +16,35 @@ using System.Windows.Shapes;
 namespace HeaviSoft.FrameworkBase.Component
 {
     /// <summary>
-    /// Follow steps 1a or 1b and then 2 to use this custom control in a XAML file.
-    ///
-    /// Step 1a) Using this custom control in a XAML file that exists in the current project.
-    /// Add this XmlNamespace attribute to the root element of the markup file where it is 
-    /// to be used:
-    ///
-    ///     xmlns:MyNamespace="clr-namespace:HeaviSoft.FrameworkBase.Component"
-    ///
-    ///
-    /// Step 1b) Using this custom control in a XAML file that exists in a different project.
-    /// Add this XmlNamespace attribute to the root element of the markup file where it is 
-    /// to be used:
-    ///
-    ///     xmlns:MyNamespace="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component"
-    ///
-    /// You will also need to add a project reference from the project where the XAML file lives
-    /// to this project and Rebuild to avoid compilation errors:
-    ///
-    ///     Right click on the target project in the Solution Explorer and
-    ///     "Add Reference"->"Projects"->[Browse to and select this project]
-    ///
-    ///
-    /// Step 2)
-    /// Go ahead and use your control in the XAML file.
-    ///
-    ///     <MyNamespace:CustomTextBox/>
-    ///
+    /// 自定义TextBox
     /// </summary>
     public class CustomTextBox : TextBox
     {
+        /// <summary>
+        /// 设置默认样式
+        /// </summary>
         static CustomTextBox()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomTextBox), new FrameworkPropertyMetadata(typeof(CustomTextBox)));
         }
 
+        /// <summary>
+        /// 应用样式
+        /// </summary>
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
         }
+
+        #region MarkTextProperty
+        public static readonly DependencyProperty MarkTextProperty = DependencyProperty.Register("MarkText", typeof(string), typeof(CustomTextBox), new PropertyMetadata(""));
+        
+        public string MarkText
+        {
+            get { return (string)GetValue(MarkTextProperty); }
+            set { SetValue(MarkTextProperty, value); }
+        }
+        
+        #endregion
     }
 }

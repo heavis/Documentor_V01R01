@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application  xmlns="http://tempuri.org/ApplicationSchema.xsd"
-    xmlns:mstns="http://tempuri.org/ApplicationSchema.xsd">
-  <Attributes>
-    <Attr mstns:Name="" mstns:Value=""/>
-  </Attributes>
-</Application>

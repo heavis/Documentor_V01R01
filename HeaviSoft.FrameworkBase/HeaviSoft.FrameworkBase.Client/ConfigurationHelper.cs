@@ -16,12 +16,20 @@ namespace HeaviSoft.FrameworkBase.Client
         internal const string Config_File_Application = "Config/Application.xml";
         internal const string Config_File_Startup = "Config/Startup.xml";
 
+        #region
+        internal const string Config_Node_Appliation = "Application";
+        internal const string Config_Node_Attriutes = "Attributes";
+        internal const string Config_Node_Attr = "Attr";
+        #endregion
+
+        #region Startup
         internal const string Config_Node_Modules = "Startup.Modules";
         internal const string Config_Node_ResourceModules = "ResourceModules";
         internal const string Config_Node_LoginModules = "LoginModules";
         internal const string Config_Node_AuthenticationModules = "AuthenticationModules";
         internal const string Config_Node_AuthorizationModules = "AuthorizationModules";
         internal const string Config_Node_ExecutionModules = "ExecutionModules";
+        #endregion
 
         internal const string Config_Node_Operation = "Add";
 

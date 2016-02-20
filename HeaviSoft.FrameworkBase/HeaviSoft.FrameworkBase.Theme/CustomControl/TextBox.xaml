@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component">
+    <!-- CustomTextBoxStyle -->
+    <Style x:Key="CustomTextBoxStyle" TargetType="{x:Type control:CustomTextBox}">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="ContentControl.Foreground" Value="{DynamicResource Window_Font_Color}" />
+        <Setter Property="ContentControl.FontSize" Value="12" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type control:CustomTextBox}">
+                    <Border x:Name="border" Height="40" BorderThickness="1" BorderBrush="{DynamicResource CustomControlBorderBrush}" CornerRadius="5" Background="White">
+                        <Grid>
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.4" x:Name="PART_MARKTEXT" FontStyle="Italic" />
+                            <ScrollViewer Margin="0, 3" Background="{TemplateBinding Background}" x:Name="PART_ContentHost">
+                            </ScrollViewer>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter TargetName="PART_MARKTEXT" Property="Text" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type control:CustomTextBox}, AncestorLevel=1}, Path=MarkText}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="PART_MARKTEXT" Property="Text" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type control:CustomTextBox}, AncestorLevel=1}, Path=MarkText}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type control:CustomTextBox}" BasedOn="{StaticResource CustomTextBoxStyle}"/>
+    <!-- Custom PasswordBox Style-->
+    <Style x:Key="CustomPasswordBoxStyle" TargetType="{x:Type control:CustomPasswordBox}" BasedOn="{StaticResource CustomTextBoxStyle}">
+    </Style>
+    <Style TargetType="{x:Type control:CustomPasswordBox}" BasedOn="{StaticResource CustomPasswordBoxStyle}" />
+</ResourceDictionary>

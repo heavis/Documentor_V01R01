@@ -1,0 +1,5 @@
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Persistence.Repository.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Persistence.Repository.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Persistence.Repository\obj\Debug\HeaviSoft.Documentor.Persistence.Repository.csprojResolveAssemblyReference.cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Persistence.Repository\obj\Debug\HeaviSoft.Documentor.Persistence.Repository.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Persistence.Repository\obj\Debug\HeaviSoft.Documentor.Persistence.Repository.pdb

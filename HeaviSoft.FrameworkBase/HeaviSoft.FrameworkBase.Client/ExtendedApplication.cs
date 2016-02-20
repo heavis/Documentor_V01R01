@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Xml.Linq;
 
 namespace HeaviSoft.FrameworkBase.Client
 {
@@ -21,7 +22,7 @@ namespace HeaviSoft.FrameworkBase.Client
     {
         public ExtendedApplication() : base()
         {
-            ShutdownMode = ShutdownMode.OnExplicitShutdown; 
+            ShutdownMode = ShutdownMode.OnExplicitShutdown;
         }
 
         #region 系统事件
@@ -92,11 +93,33 @@ namespace HeaviSoft.FrameworkBase.Client
         #region 父类抽象方法实现
         public override void BuildSteps()
         {
+            #region Application Attributes
+            var applicationRoot = ConfigurationHelper.GetApplicationConfigRoot();
+            if (!applicationRoot.IsNull())
+            {
+                
+                var eleLayouts = new string[] { ConfigurationHelper.Config_Node_Attriutes, ConfigurationHelper.Config_Node_Attr };
+                var attributes = applicationRoot.GetElements(eleLayouts);
+                foreach (var element in attributes)
+                {
+                    var name = element.GetAttributeValue("Name");
+                    var value = element.GetAttributeValue("Value");
+
+                    if (!this.Data.ContainsKey(name))
+                    {
+                        this.Data.Add(name, value);
+                    }
+                }
+            }
+            #endregion
+
+            #region Startup 
             var startupRoot = ConfigurationHelper.GetStartupConfigRoot();
             if (!startupRoot.IsNull())
             {
                 //加载ResourceModules
-                var resourcesTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_ResourceModules, ConfigurationHelper.Config_Node_Operation });
+                var startups = startupRoot.GetElements(new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_ResourceModules, ConfigurationHelper.Config_Node_Operation });
+                var resourcesTypes = startups.ToList().Select(el => el.GetAttributeValue("Type"));
                 var resourceModules = new List<IResourceModule>();
                 foreach (var type in resourcesTypes)
                 {
@@ -105,30 +128,32 @@ namespace HeaviSoft.FrameworkBase.Client
                 this.ThemeResourceModules.AddRange(resourceModules.Where(res => res is IThemeResourceModule).Cast<IThemeResourceModule>());
                 this.LanguageResourceMudules.AddRange(resourceModules.Where(res => res is ILanguageResourceModule).Cast<ILanguageResourceModule>());
                 //加载LoginModules
-                var loginTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_LoginModules, ConfigurationHelper.Config_Node_Operation });
+                var loginTypes = startupRoot.GetElements(new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_LoginModules, ConfigurationHelper.Config_Node_Operation }).ToList().Select(el => el.GetAttributeValue("Type"));
                 foreach (var type in loginTypes)
                 {
                     this.LoginModules.Add(CreateInstanceByType<ILoginModule>(type));
                 }
                 //加载AuthenticationModules
-                var authenticationTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_AuthenticationModules, ConfigurationHelper.Config_Node_Operation });
+                var authenticationTypes = startupRoot.GetElements(new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_AuthenticationModules, ConfigurationHelper.Config_Node_Operation }).ToList().Select(el => el.GetAttributeValue("Type"));
                 foreach (var type in authenticationTypes)
                 {
                     this.AuthenticationModules.Add(CreateInstanceByType<IAuthenticationModule>(type));
                 }
                 //加载AutorizationModules
-                var authorizationTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_AuthorizationModules, ConfigurationHelper.Config_Node_Operation });
+                var authorizationTypes = startupRoot.GetElements(new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_AuthorizationModules, ConfigurationHelper.Config_Node_Operation }).ToList().Select(el => el.GetAttributeValue("Type"));
                 foreach (var type in authorizationTypes)
                 {
                     this.AuthorizationModules.Add(CreateInstanceByType<IAuthorizationModule>(type));
                 }
                 //加载执行流程
-                var executionTypes = startupRoot.GetAtrriuteValues("Type", new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_ExecutionModules, ConfigurationHelper.Config_Node_Operation });
+                var executionTypes = startupRoot.GetElements(new string[] { ConfigurationHelper.Config_Node_Modules, ConfigurationHelper.Config_Node_ExecutionModules, ConfigurationHelper.Config_Node_Operation }).ToList().Select(el => el.GetAttributeValue("Type"));
                 foreach (var type in executionTypes)
                 {
                     this.ExecutionModules.Add(CreateInstanceByType<IExecutionModule>(type));
                 }
             }
+
+            #endregion
         }
 
         protected override bool ExecuteThemeResourceModulesCore()
@@ -239,7 +264,7 @@ namespace HeaviSoft.FrameworkBase.Client
                 return false;
             }
             //用户授权操作
-            foreach(var autor in AuthorizationModules)
+            foreach (var autor in AuthorizationModules)
             {
                 if (!autor.Authorize(this))
                 {
@@ -254,7 +279,7 @@ namespace HeaviSoft.FrameworkBase.Client
         protected override bool ExecuteExecutionModulesCore()
         {
             //加载数据s
-            foreach(var excute in ExecutionModules)
+            foreach (var excute in ExecutionModules)
             {
                 excute.Execute(this);
             }
@@ -275,7 +300,7 @@ namespace HeaviSoft.FrameworkBase.Client
                 {
                     instance = Assembly.LoadFrom(string.Format("{0}.dll", array[1].Trim())).CreateInstance(array[0].Trim());
                 }
-                catch(FileNotFoundException)
+                catch (FileNotFoundException)
                 {
                     instance = Assembly.LoadFrom(string.Format("{0}.exe", array[1].Trim())).CreateInstance(array[0].Trim());
                 }

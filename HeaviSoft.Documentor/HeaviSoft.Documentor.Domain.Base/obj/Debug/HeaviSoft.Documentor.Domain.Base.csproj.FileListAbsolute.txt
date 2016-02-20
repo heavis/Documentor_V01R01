@@ -1,0 +1,5 @@
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Domain.Base\obj\Debug\HeaviSoft.Documentor.Domain.Base.csprojResolveAssemblyReference.cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Domain.Base.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Domain.Base.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Domain.Base\obj\Debug\HeaviSoft.Documentor.Domain.Base.dll
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Domain.Base\obj\Debug\HeaviSoft.Documentor.Domain.Base.pdb

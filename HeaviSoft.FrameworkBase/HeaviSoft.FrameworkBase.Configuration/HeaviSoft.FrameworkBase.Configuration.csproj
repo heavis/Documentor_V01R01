@@ -43,7 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Template\Applicaition.xml" />
+    <Content Include="Template\Application.xml" />
     <None Include="Schema\ApplicationSchema.xsd">
       <SubType>Designer</SubType>
     </None>

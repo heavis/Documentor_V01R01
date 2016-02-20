@@ -12,5 +12,6 @@ E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\Heavi
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Theme.pdb
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Theme\obj\Debug\HeaviSoft.FrameworkBase.Theme.csprojResolveAssemblyReference.cache
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Theme\obj\Debug\Themes\GrayWhite\Text.baml
-E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Theme\obj\Debug\Themes\GrayWhite\Button.baml
-E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Theme\obj\Debug\Themes\GrayWhite\TextBox.baml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Theme\obj\Debug\CustomControl\Button.baml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Theme\obj\Debug\CustomControl\TextBox.baml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Theme\obj\Debug\CustomControl\MessageBox.baml

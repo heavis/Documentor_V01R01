@@ -6,21 +6,9 @@
         xmlns:local="clr-namespace:HeaviSoft.Documentor.Presentation.Login"
         xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component"
         mc:Ignorable="d"  Background="Transparent" WindowStartupLocation="CenterScreen"
-        WindowStyle="None" AllowsTransparency="True"
-        Title="LOGIN" Height="300" Width="480">
-    <Window.Resources>
-        <VisualBrush  x:Key="TextboxUserNameHelpBrush" TileMode="None" Opacity="0.3" Stretch="None" AlignmentX="Left">
-            <VisualBrush.Visual>
-                <TextBlock Text="User Name"  FontStyle="Italic" />
-            </VisualBrush.Visual>
-        </VisualBrush>
-        <VisualBrush  x:Key="TextboxPasswordHelpBrush" TileMode="None" Opacity="0.3" Stretch="None" AlignmentX="Left">
-            <VisualBrush.Visual>
-                <TextBlock Text="Password"  FontStyle="Italic" />
-            </VisualBrush.Visual>
-        </VisualBrush>
-    </Window.Resources>
-    <Border CornerRadius="5" Background="{DynamicResource Login_Background_Color}" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1" >
+        WindowStyle="None" AllowsTransparency="True"   MouseLeftButtonDown="Window_PreviewMouseLeftButtonDown"
+        Title="LOGIN" Height="300" Width="480" ResizeMode="NoResize">
+    <Border  CornerRadius="5" Background="{DynamicResource Login_Background_Color}" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1" >
         <Grid Margin="30, 30, 30, 15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
@@ -34,40 +22,15 @@
             </DockPanel>
             <Border Grid.Row="1" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1" />
             <StackPanel Margin="10, 30, 10, 0" Orientation="Vertical" Grid.Row="2">
-                <control:CustomTextBox Margin="0, 3" VerticalContentAlignment="Center">
-                    <control:CustomTextBox.Style>
-                        <Style TargetType="control:CustomTextBox" BasedOn="{StaticResource CustomTextBoxStyle}">
-                            <Style.Triggers>
-                                <Trigger Property="Text" Value="{x:Null}">
-                                    <Setter Property="Background" Value="{DynamicResource TextboxUserNameHelpBrush}" />
-                                </Trigger>
-                                <Trigger Property="Text" Value="">
-                                    <Setter Property="Background" Value="{StaticResource TextboxUserNameHelpBrush}"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </control:CustomTextBox.Style>
-                </control:CustomTextBox>
-                <control:CustomTextBox Margin="0, 3" VerticalContentAlignment="Center" >
-                    <control:CustomTextBox.Style>
-                        <Style TargetType="control:CustomTextBox" BasedOn="{StaticResource CustomTextBoxStyle}">
-                            <Style.Triggers>
-                                <Trigger Property="Text" Value="{x:Null}">
-                                    <Setter Property="Background" Value="{DynamicResource TextboxPasswordHelpBrush}" />
-                                </Trigger>
-                                <Trigger Property="Text" Value="">
-                                    <Setter Property="Background" Value="{StaticResource TextboxPasswordHelpBrush}"/>
-                                </Trigger>
-
-                            </Style.Triggers>
-                        </Style>
-                    </control:CustomTextBox.Style>
-                </control:CustomTextBox>
+                <control:CustomTextBox MaxLength="20" Name="CTBoxUserName" MarkText="Please input user name." Margin="0, 3" VerticalContentAlignment="Center" />
+                <control:CustomPasswordBox MaxLength="20" Name="CPBoxPassword" MarkText="Please input password." Margin="0, 3" VerticalContentAlignment="Center" />
                 <TextBlock HorizontalAlignment="Right">
-                     <Hyperlink FontSize="16">reset</Hyperlink>
+                     <Hyperlink Click="Hyperlink_Click" FontSize="16">
+                         reset
+                     </Hyperlink>
                 </TextBlock>
             </StackPanel>
-            <Button FontSize="16" Foreground="{DynamicResource Window_Font_Color}" FontWeight="DemiBold"  Grid.Row="3" Content="Submit" Width="100" Margin="0, 2"  HorizontalAlignment="Center">
+            <Button Click="BtnSubmit_Click" FontSize="16" Foreground="{DynamicResource Window_Font_Color}" FontWeight="DemiBold"  Grid.Row="3" Content="Submit" Width="100" Margin="0, 2"  HorizontalAlignment="Center">
             </Button>
         </Grid>
     </Border>

@@ -3,9 +3,10 @@
                     xmlns:local="clr-namespace:HeaviSoft.FrameworkBase.Theme">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/ColorBrush.xaml" />
-        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/Button.xaml" />
         <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/Text.xaml" />
-        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/Themes/GrayWhite/TextBox.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/TextBox.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/Button.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/MessageBox.xaml" />
         <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/CustomWindow.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

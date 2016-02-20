@@ -16,7 +16,7 @@ namespace HeaviSoft.FrameworkBase.Extension
         /// <param name="attr">属性</param>
         /// <param name="eleLayouts">元素层次集合</param>
         /// <returns></returns>
-        public static List<string> GetAtrriuteValues(this XElement parent, string attr, params string[] eleLayouts)
+        public static List<string> GetAtrriuteValues(this XElement parent, string attr, string[] eleLayouts)
         {
             if (attr.IsNull() || eleLayouts.IsNull() || eleLayouts.Length == 0)
             {
@@ -35,8 +35,42 @@ namespace HeaviSoft.FrameworkBase.Extension
             }
             catch (Exception ex)
             {
-                //记录日志
                 return list;
+            }
+        }
+
+        public static IEnumerable<XElement> GetElements(this XElement parent,  string[] eleLayouts)
+        {
+            if (eleLayouts.IsNull() || eleLayouts.Length == 0)  
+            {
+                throw new ArgumentException("eleLayouts can't be null.");
+            }
+            var list = new List<XElement>();
+            try
+            {
+                var childElement = parent;
+                for (var i = 0; i < eleLayouts.Length - 1; i++)
+                {
+                    childElement = childElement.Elements().FirstOrDefault(el => el.Name.LocalName == eleLayouts[i]);
+                }
+                list.AddRange(childElement.Elements().Where(el => el.Name.LocalName == eleLayouts[eleLayouts.Length - 1]).ToList());
+                return list;
+            }
+            catch (Exception ex)
+            {
+                return list;
+            }
+        }
+
+        public static string GetAttributeValue(this XElement element, string attr)
+        {
+            try
+            {
+                return element.Attributes().FirstOrDefault(at => at.Name.LocalName == attr).Value;
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
     }

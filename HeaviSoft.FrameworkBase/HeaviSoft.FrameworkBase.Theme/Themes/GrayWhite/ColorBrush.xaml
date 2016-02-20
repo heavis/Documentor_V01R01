@@ -14,6 +14,17 @@
         <GradientStop Color="#e9e9e9" Offset="0.5"/>
         <GradientStop Color="#d4d2d2" Offset="1" />
     </LinearGradientBrush>
+    <!-- Default Button Style -->
+    <LinearGradientBrush x:Key="DefaultButtonBackgroundColorBusrh" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#4ab3e0" Offset="0"/>
+        <GradientStop Color="#2e9dcc" Offset="0.5"/>
+        <GradientStop Color="#168abb" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DefaultButtonLightBackgroundColorBusrh" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#ade5fd" Offset="0"/>
+        <GradientStop Color="#8cd4f2" Offset="0"/>
+        <GradientStop Color="#4ab3e0" Offset="0.5"/>
+    </LinearGradientBrush>
     <!-- Custom Window Style -->
     <LinearGradientBrush x:Key="Window_TitleBar_Background" EndPoint="0,1" StartPoint="0,0">
         <GradientStop Color="#cbcbcb" Offset="0"/>
@@ -22,6 +33,7 @@
     </LinearGradientBrush>
     <SolidColorBrush x:Key="Window_Title_Font_Color" Color="#77818b" />
     <SolidColorBrush x:Key="Window_Font_Color" Color="#77818b" />
+    <SolidColorBrush x:Key="Window_Dark_Font_Color" Color="#fff" />
     <BitmapImage x:Key="Window_Button_Close_ImageBrush" UriSource="Images/Window/close.png" />
     <BitmapImage x:Key="Window_Button_Min_ImageBrush" UriSource="Images/Window/min.png" />
     <BitmapImage x:Key="Window_Button_Max_ImageBrush" UriSource="Images/Window/max.png" />

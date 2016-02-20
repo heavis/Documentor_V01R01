@@ -53,6 +53,9 @@
     <Compile Include="TestCustomWindow.xaml.cs">
       <DependentUpon>TestCustomWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TestMessageBox.xaml.cs">
+      <DependentUpon>TestMessageBox.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -64,6 +67,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TestCustomWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,6 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Component\HeaviSoft.FrameworkBase.Component.csproj">
+      <Project>{30b273d0-a8ff-4b33-be79-6182d30148f1}</Project>
+      <Name>HeaviSoft.FrameworkBase.Component</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

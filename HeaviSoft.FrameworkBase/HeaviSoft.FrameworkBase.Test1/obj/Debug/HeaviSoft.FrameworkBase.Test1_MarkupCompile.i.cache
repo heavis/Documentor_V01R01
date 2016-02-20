@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-31294852800
+41474425169
 
-11189705169
-13-1142990016
-MainWindow.xaml;TestCustomWindow.xaml;Themes\Generic.xaml;
+12-1843627789
+14-1953291483
+MainWindow.xaml;TestCustomWindow.xaml;TestMessageBox.xaml;Themes\Generic.xaml;
 
-False
+True
 

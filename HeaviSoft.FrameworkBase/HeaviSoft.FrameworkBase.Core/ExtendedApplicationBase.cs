@@ -23,6 +23,7 @@ namespace HeaviSoft.FrameworkBase.Core
 
         public ExtendedApplicationBase() : base()
         {
+            Data = new Dictionary<object, object>();
             ThemeResourceModules = new List<IThemeResourceModule>();
             LanguageResourceMudules = new List<ILanguageResourceModule>();
             LoginModules = new List<ILoginModule>();
@@ -38,7 +39,7 @@ namespace HeaviSoft.FrameworkBase.Core
         /// </summary>
         public AppContext Context { get; private set; }
 
-
+        public Dictionary<object, object> Data { get; private set; }
 
         protected List<IThemeResourceModule> ThemeResourceModules { get; private set; }
 

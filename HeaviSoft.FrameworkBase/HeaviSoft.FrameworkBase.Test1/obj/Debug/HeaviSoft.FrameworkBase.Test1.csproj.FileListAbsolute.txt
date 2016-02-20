@@ -14,3 +14,8 @@ E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\TestCustomWindow.baml
 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\Themes\Generic.baml
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\bin\Debug\HeaviSoft.FrameworkBase.Component.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\bin\Debug\HeaviSoft.FrameworkBase.Component.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\HeaviSoft.FrameworkBase.Test1.csprojResolveAssemblyReference.cache
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\TestMessageBox.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Test1\obj\Debug\TestMessageBox.baml

@@ -16,5 +16,5 @@ DEBUG;TRACE
 17-241153726
 AuthenticationWindow.xaml;LoginWindow.xaml;MainWindow.xaml;
 
-False
+True
 

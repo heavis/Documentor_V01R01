@@ -1,0 +1,133 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HeaviSoft.UIDesign">
+    <!-- Text Style-->
+    <Style x:Key="TitleStyle" TargetType="ContentControl">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontStretch" Value="UltraExpanded" />
+        <Setter Property="Foreground" Value="#77818b" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+    </Style>
+    <!-- Button Color-->
+    <LinearGradientBrush x:Key="ButtonBackgroundColorBusrh" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#fdfdfd" Offset="0"/>
+        <GradientStop Color="#f5f5f5" Offset="0.5"/>
+        <GradientStop Color="#e9e9e9" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonLightBackgroundColorBusrh" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#f5f5f5" Offset="0"/>
+        <GradientStop Color="#e9e9e9" Offset="0.5"/>
+        <GradientStop Color="#d4d2d2" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DefaultButtonBackgroundColorBusrh" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#4ab3e0" Offset="0"/>
+        <GradientStop Color="#2e9dcc" Offset="0.5"/>
+        <GradientStop Color="#168abb" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DefaultButtonLightBackgroundColorBusrh" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#ade5fd" Offset="0"/>
+        <GradientStop Color="#8cd4f2" Offset="0"/>
+        <GradientStop Color="#4ab3e0" Offset="0.5"/>
+    </LinearGradientBrush>
+    <!-- Button Style-->
+    <Style x:Key="ButonStyle" TargetType="{x:Type ButtonBase}">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundColorBusrh}" />
+        <Setter Property="BorderBrush" Value="#b9bac1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ButtonLightBackgroundColorBusrh}"/>
+                            <Setter Property="BorderThickness" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderThickness" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                    <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              RecognizesAccessKey="True" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="Button" BasedOn="{StaticResource ButonStyle}" />
+    <!-- Default Button Style -->
+    <Style x:Key="DefaultButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource ButonStyle}">
+        <Setter Property="Background" Value="{DynamicResource DefaultButtonBackgroundColorBusrh}" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource DefaultButtonLightBackgroundColorBusrh}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="{x:Type local:CustomMessageBox}">
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:CustomMessageBox}">
+                    <Border CornerRadius="5" Background="#f7f7f7" BorderBrush="#b9bac1" BorderThickness="1" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="1" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid x:Name="PART_TITLEBAR" Grid.Row="0">
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#cbcbcb" Offset="0"/>
+                                        <GradientStop Color="#bababa" Offset="0.5"/>
+                                        <GradientStop Color="#aaaaaa" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+                                <Label x:Name="PART_TITLEBAR_TITLE" HorizontalContentAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource TitleStyle}" Content="{TemplateBinding Title}" />
+                            </Grid>
+                            <Border Grid.Row="1" BorderBrush="#b9bac1" BorderThickness="1" />
+                            <Grid Grid.Row="2" Margin="15, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="PART_IMAGETIP" Grid.Column="0" Width="40" Height="40" Source="{TemplateBinding Icon}"></Image>
+                                <TextBlock x:Name="PART_CONTENT" FontSize="14" Text="" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                </TextBlock>
+                            </Grid>
+                            <ContentControl x:Name="PART_BUTTONPANEL"  Grid.Row="4" >
+                                <StackPanel Margin="15, 5" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3" >
+                                    <Button Style="{DynamicResource DefaultButtonStyle}" Margin="5, 0" FontSize="16" Foreground="#fff" FontWeight="DemiBold"  Grid.Row="3" Content="Ok" Width="100" HorizontalAlignment="Center">
+                                    </Button>
+                                </StackPanel>
+                            </ContentControl>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:CustomMessageBox}, AncestorLevel=1}, Path=MessageBoxButton}"  Value="MessageBoxButton.OKCancel">
+                            <Setter TargetName="PART_BUTTONPANEL" Property="Content">
+                                <Setter.Value>
+                                    <StackPanel Margin="15, 5" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3" >
+                                        <Button Style="{DynamicResource DefaultButtonStyle}" Margin="5, 0" FontSize="16" Foreground="#fff" FontWeight="DemiBold"  Grid.Row="3" Content="Ok" Width="100">
+                                        </Button>
+                                        <Button FontSize="16" Foreground="#77818b" FontWeight="DemiBold"  Content="Cancel" Width="100" >
+                                        </Button>
+                                    </StackPanel>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers> 
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter> 
+    </Style>
+</ResourceDictionary>

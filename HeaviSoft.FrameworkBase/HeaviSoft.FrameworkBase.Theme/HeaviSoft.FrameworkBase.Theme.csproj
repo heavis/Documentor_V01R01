@@ -47,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="CustomControl\MessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CustomControl\CustomWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -55,11 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\GrayWhite\Button.xaml">
+    <Page Include="CustomControl\Button.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\GrayWhite\TextBox.xaml">
+    <Page Include="CustomControl\TextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -83,6 +87,13 @@
     <Resource Include="Themes\GrayWhite\Images\Window\max.png" />
     <Resource Include="Themes\GrayWhite\Images\Window\maximum.png" />
     <Resource Include="Themes\GrayWhite\Images\Window\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\GrayWhite\Images\MessageBox\question.png" />
+    <Resource Include="Themes\GrayWhite\Images\MessageBox\warn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\GrayWhite\Images\MessageBox\info.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
