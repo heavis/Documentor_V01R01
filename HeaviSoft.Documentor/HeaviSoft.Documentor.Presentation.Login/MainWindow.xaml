@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HeaviSoft.Documentor.Presentation.Login"
         mc:Ignorable="d" Style="{DynamicResource WindowStyle}"
         xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component"
-        Title="Docking" Height="600" Width="800">
+        Title="Docking" Height="600" Width="800" WindowState="Maximized">
     <Grid>
         <Button Content="Docking Button" Height="30" Width="100"/>
     </Grid>

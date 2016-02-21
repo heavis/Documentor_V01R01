@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HeaviSoft.FrameworkBase.Utility.Log;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace HeaviSoft.FrameworkBase.Test1
         public MainWindow()
         {
             InitializeComponent();
+            WriteLog();
+        }
+
+        private void WriteLog()
+        {
+            Logger.Error("HeaviSoft.FrameworkBase.Test1");
         }
     }
 }

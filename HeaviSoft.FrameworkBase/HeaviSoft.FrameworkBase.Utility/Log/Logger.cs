@@ -8,6 +8,12 @@ namespace HeaviSoft.FrameworkBase.Utility.Log
 {
     public class Logger
     {
+        static Logger()
+        {
+            //读取日志  如果使用log4net,应用程序一开始的时候，都要进行初始化配置
+            log4net.Config.XmlConfigurator.Configure();
+        }
+
         private static ILogger _logger = new LoggerWriter();
 
         private static ILogger GetInstance()

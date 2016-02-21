@@ -111,6 +111,10 @@
       <Project>{30b273d0-a8ff-4b33-be79-6182d30148f1}</Project>
       <Name>HeaviSoft.FrameworkBase.Component</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Utility\HeaviSoft.FrameworkBase.Utility.csproj">
+      <Project>{2644b5ae-4ff1-4e61-86d0-8627616f69f8}</Project>
+      <Name>HeaviSoft.FrameworkBase.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

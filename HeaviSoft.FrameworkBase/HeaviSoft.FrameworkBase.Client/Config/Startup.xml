@@ -7,9 +7,11 @@ xmlns:xsi="http://tempuri.org/StartupSchema.xsd">
       <Add xsi:Type="HeaviSoft.Documentor.Theme.Implements.ThemeModule, HeaviSoft.Documentor.Theme"/>
     </ResourceModules>
     <LoginModules>
+       <Add xsi:Name="LoginModule" xsi:Type="HeaviSoft.Documentor.Presentation.Login.Implements.InitializeModule,HeaviSoft.Documentor.Presentation.Login"/>
       <Add xsi:Name="LoginModule" xsi:Type="HeaviSoft.Documentor.Presentation.Login.Implements.LoginModule,HeaviSoft.Documentor.Presentation.Login"/>
     </LoginModules>
     <AuthenticationModules>
+      <Add xsi:Name="AuthenticationModule" xsi:Type="HeaviSoft.Documentor.Application.Security.AuthenticationModule, HeaviSoft.Documentor.Application.Security"  />
       <!--<Add xsi:Name="AuthenticationModule" xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.AuthenticationModule, HeaviSoft.FrameworkBase.Test"  />-->
     </AuthenticationModules>
     <AuthorizationModules>

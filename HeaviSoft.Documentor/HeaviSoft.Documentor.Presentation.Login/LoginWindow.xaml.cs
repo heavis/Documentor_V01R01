@@ -13,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HeaviSoft.FrameworkBase.Core;
+using HeaviSoft.FrameworkBase.Utility;
 
 namespace HeaviSoft.Documentor.Presentation.Login
 {
@@ -21,9 +23,12 @@ namespace HeaviSoft.Documentor.Presentation.Login
     /// </summary>
     public partial class LoginWindow : Window
     {
-        public LoginWindow()
+        private ExtendedApplicationBase _app;
+
+        public LoginWindow(ExtendedApplicationBase app)
         {
             InitializeComponent();
+            this._app = app;
         }
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -41,8 +46,14 @@ namespace HeaviSoft.Documentor.Presentation.Login
         {
             if (CheckInput())
             {
-                //开始验证
+                //把用户信息保存到缓存中
+                _app.Data[_app.PROPERTY_ACCOUNT] = CTBoxUserName.Text.Trim();
+                _app.Data[_app.PROPERTY_PASSWORD] = EncryptHelper.DES3Encrypt(CPBoxPassword.Password.GetOrginalString().Trim());
 
+                if (_app.ExecuteAutheticationModulesCore())
+                {
+                    DialogResult = true;
+                }
             }
         }
 

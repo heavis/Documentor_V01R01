@@ -1,10 +1,12 @@
-﻿using HeaviSoft.FrameworkBase.Core;
+﻿using HeaviSoft.FrameworkBase.Component;
+using HeaviSoft.FrameworkBase.Core;
 using HeaviSoft.FrameworkBase.Core.ExpcetionEx;
 using HeaviSoft.FrameworkBase.Core.Module;
 using HeaviSoft.FrameworkBase.Extension;
 using HeaviSoft.FrameworkBase.Utility.Log;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -41,17 +43,15 @@ namespace HeaviSoft.FrameworkBase.Client
                 //执行步骤
                 if (!this.ExecuteSteps())
                 {
-                    //步骤未执行成功
-                    throw new StartupException("Error occured when Initializing application.");
+                    this.ExitEx();
                 }
             }
             catch (Exception ex)
             {
                 //写日志
-                Logger.Error("Error occured during appication start-up.");
-                throw ex;
+                Logger.Error("Error occured during appication start-up.", ex);
+                this.ExitEx();
             }
-
         }
 
         /// <summary>
@@ -97,7 +97,6 @@ namespace HeaviSoft.FrameworkBase.Client
             var applicationRoot = ConfigurationHelper.GetApplicationConfigRoot();
             if (!applicationRoot.IsNull())
             {
-                
                 var eleLayouts = new string[] { ConfigurationHelper.Config_Node_Attriutes, ConfigurationHelper.Config_Node_Attr };
                 var attributes = applicationRoot.GetElements(eleLayouts);
                 foreach (var element in attributes)
@@ -206,14 +205,12 @@ namespace HeaviSoft.FrameworkBase.Client
                 {
                     if (!login.Login(this))
                     {
-                        //取消了登录，直接退出系统
-                        //Shutdown();
-                        ExitEx();
+                        return false;
                     }
                 }
                 catch (Exception ex)
                 {
-                    throw new StartupException("Error occured when loading login module.", ex);
+                    throw ex;
                 }
             }
 

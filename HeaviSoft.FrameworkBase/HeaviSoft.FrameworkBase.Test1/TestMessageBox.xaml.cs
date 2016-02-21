@@ -27,7 +27,7 @@ namespace HeaviSoft.FrameworkBase.Test1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxHelper.Show("Delete", "Do you want to delete selected data?");
+            MessageBoxHelper.Info("Delete", "Do you want to delete selected data?");
         }
     }
 }

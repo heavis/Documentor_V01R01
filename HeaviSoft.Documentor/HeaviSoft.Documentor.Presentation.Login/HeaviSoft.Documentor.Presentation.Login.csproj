@@ -48,6 +48,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Extension.dll</HintPath>
     </Reference>
+    <Reference Include="HeaviSoft.FrameworkBase.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\HeaviSoft.FrameworkBase\HeaviSoft.Lib\Internal\HeaviSoft.FrameworkBase.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -66,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Implements\ExecutionModule.cs" />
     <Compile Include="Implements\LoginModule.cs" />
+    <Compile Include="Implements\InitializeModule.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -107,6 +112,28 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\login-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeaviSoft.Documentor.Domain.DataEntity\HeaviSoft.Documentor.Domain.DataEntity.csproj">
+      <Project>{e567c2bc-0572-4ddc-b430-c3f8dd87964b}</Project>
+      <Name>HeaviSoft.Documentor.Domain.DataEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.Documentor.Domain.Repository.Interface\HeaviSoft.Documentor.Domain.Repository.Interface.csproj">
+      <Project>{DE1FEBD2-B649-4340-8C34-841A24B8ECB7}</Project>
+      <Name>HeaviSoft.Documentor.Domain.Repository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.Documentor.Domain.Repository\HeaviSoft.Documentor.Domain.Repository.csproj">
+      <Project>{a32e62eb-9b71-47c8-a52a-1bfd2c7ed9d2}</Project>
+      <Name>HeaviSoft.Documentor.Domain.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.Documentor.Persistence.Repository\HeaviSoft.Documentor.Persistence.Repository.csproj">
+      <Project>{2448e6f9-4f56-4291-9631-d9f09d310e5e}</Project>
+      <Name>HeaviSoft.Documentor.Persistence.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeaviSoft.Documentor.Persistence.STSdb\HeaviSoft.Documentor.Persistence.STSdb.csproj">
+      <Project>{1754d7df-52e7-4964-959f-273c9c89d75f}</Project>
+      <Name>HeaviSoft.Documentor.Persistence.STSdb</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

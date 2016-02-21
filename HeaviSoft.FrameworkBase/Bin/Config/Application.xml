@@ -2,6 +2,6 @@
 <Application  xmlns="http://tempuri.org/ApplicationSchema.xsd"
     xmlns:mstns="http://tempuri.org/ApplicationSchema.xsd">
   <Attributes>
-    <Attr mstns:Name="stsdb" mstns:Value="/Data/db.stsdb4"/>
+    <Attr mstns:Name="stsdb" mstns:Value="Data/db.stsdb4"/>
   </Attributes>
 </Application>

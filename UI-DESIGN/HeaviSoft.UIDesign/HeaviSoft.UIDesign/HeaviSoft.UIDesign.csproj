@@ -54,9 +54,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DockWindow.xaml.cs">
+      <DependentUpon>DockWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestMessageBox.xaml.cs">
       <DependentUpon>TestMessageBox.xaml</DependentUpon>
     </Compile>
+    <Page Include="DockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,7 +153,15 @@
   <ItemGroup>
     <Resource Include="warn.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pin_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="text_file.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

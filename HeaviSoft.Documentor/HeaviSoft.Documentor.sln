@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.Documentor.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.Documentor.Domain.Repository", "HeaviSoft.Documentor.Domain.Repository\HeaviSoft.Documentor.Domain.Repository.csproj", "{A32E62EB-9B71-47C8-A52A-1BFD2C7ED9D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.Documentor.Application.Security", "HeaviSoft.Documentor.Application.Security\HeaviSoft.Documentor.Application.Security.csproj", "{ED9831E0-32ED-47C7-9051-5A48855B8FAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{A32E62EB-9B71-47C8-A52A-1BFD2C7ED9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A32E62EB-9B71-47C8-A52A-1BFD2C7ED9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32E62EB-9B71-47C8-A52A-1BFD2C7ED9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9831E0-32ED-47C7-9051-5A48855B8FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9831E0-32ED-47C7-9051-5A48855B8FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9831E0-32ED-47C7-9051-5A48855B8FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9831E0-32ED-47C7-9051-5A48855B8FAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,5 +106,6 @@ Global
 		{CA7CF31B-18AB-4984-85AE-32B0A6A353C2} = {6F343077-4ED6-4958-89BA-9CDA6459B3C7}
 		{DE1FEBD2-B649-4340-8C34-841A24B8ECB7} = {6F343077-4ED6-4958-89BA-9CDA6459B3C7}
 		{A32E62EB-9B71-47C8-A52A-1BFD2C7ED9D2} = {6F343077-4ED6-4958-89BA-9CDA6459B3C7}
+		{ED9831E0-32ED-47C7-9051-5A48855B8FAA} = {9FC334EA-0B50-4827-92FC-3C2B4AF00055}
 	EndGlobalSection
 EndGlobal

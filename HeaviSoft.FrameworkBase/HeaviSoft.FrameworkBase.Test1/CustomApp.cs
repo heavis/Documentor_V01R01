@@ -19,7 +19,7 @@ namespace HeaviSoft.FrameworkBase.Test1
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            TestCustomWindow window = new TestCustomWindow();
+            MainWindow window = new MainWindow();
             window.ShowDialog();
         }
     }

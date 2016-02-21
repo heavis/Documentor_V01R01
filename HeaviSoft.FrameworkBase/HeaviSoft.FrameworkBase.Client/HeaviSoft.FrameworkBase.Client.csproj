@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +84,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Component\HeaviSoft.FrameworkBase.Component.csproj">
+      <Project>{30b273d0-a8ff-4b33-be79-6182d30148f1}</Project>
+      <Name>HeaviSoft.FrameworkBase.Component</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HeaviSoft.FrameworkBase.Core\HeaviSoft.FrameworkBase.Core.csproj">
       <Project>{90dcb904-05e1-41ba-ab02-3702914e4745}</Project>
       <Name>HeaviSoft.FrameworkBase.Core</Name>

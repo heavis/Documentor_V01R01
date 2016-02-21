@@ -18,6 +18,7 @@ xcopy HeaviSoft.FrameworkBase\Bin HeaviSoft.Documentor\bin /y /s
 %BUILPATH%\MSBuild.exe "HeaviSoft.Documentor\HeaviSoft.Documentor.Domain.Base\HeaviSoft.Documentor.Domain.Base.csproj" /t:Build /p:Configuration=Debug
 %BUILPATH%\MSBuild.exe "HeaviSoft.Documentor\HeaviSoft.Documentor.Domain.Repository.Interface\HeaviSoft.Documentor.Domain.Repository.Interface.csproj" /t:Build /p:Configuration=Debug
 %BUILPATH%\MSBuild.exe "HeaviSoft.Documentor\HeaviSoft.Documentor.Domain.Repository\HeaviSoft.Documentor.Domain.Repository.csproj" /t:Build /p:Configuration=Debug
+%BUILPATH%\MSBuild.exe "HeaviSoft.Documentor\HeaviSoft.Documentor.Application.Security\HeaviSoft.Documentor.Application.Security.csproj" /t:Build /p:Configuration=Debug
 %BUILPATH%\MSBuild.exe "HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\HeaviSoft.Documentor.Presentation.Docking.csproj" /t:Build /p:Configuration=Debug
 %BUILPATH%\MSBuild.exe "HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Login\HeaviSoft.Documentor.Presentation.Login.csproj" /t:Build /p:Configuration=Debug
 PAUSE
