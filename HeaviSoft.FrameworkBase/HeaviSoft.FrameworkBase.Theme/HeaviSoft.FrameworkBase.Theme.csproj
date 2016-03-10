@@ -47,6 +47,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="CustomControl\CustomLayoutPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControl\CustomDockLayoutManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControl\CustomTabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControl\CustomTabItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CustomControl\MessageBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,6 +110,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Themes\GrayWhite\Images\MessageBox\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\GrayWhite\Images\TabItem\text_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\GrayWhite\Images\Docking\pin.png" />
+    <Resource Include="Themes\GrayWhite\Images\Docking\pin_horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\GrayWhite\Images\Common\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.FrameworkBase.The
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.FrameworkBase.Test1", "HeaviSoft.FrameworkBase.Test1\HeaviSoft.FrameworkBase.Test1.csproj", "{6F90B4FB-5EF2-4795-850A-451ADFEEDEEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaviSoft.FrameworkBase.Modeling", "HeaviSoft.FrameworkBase.Modeling\HeaviSoft.FrameworkBase.Modeling.csproj", "{13258451-BE02-4139-B07D-18DF284D9BE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{6F90B4FB-5EF2-4795-850A-451ADFEEDEEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F90B4FB-5EF2-4795-850A-451ADFEEDEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F90B4FB-5EF2-4795-850A-451ADFEEDEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13258451-BE02-4139-B07D-18DF284D9BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13258451-BE02-4139-B07D-18DF284D9BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13258451-BE02-4139-B07D-18DF284D9BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13258451-BE02-4139-B07D-18DF284D9BE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,5 +101,6 @@ Global
 		{30B273D0-A8FF-4B33-BE79-6182D30148F1} = {836BD971-633B-456C-B984-69B89DD019CB}
 		{F6DB5235-0265-4D75-A25A-E9AE7B830CBF} = {470FA5D6-90D3-4933-8B00-056648AEDE58}
 		{6F90B4FB-5EF2-4795-850A-451ADFEEDEEC} = {29765E38-76C9-4900-BECF-24522DB40A2C}
+		{13258451-BE02-4139-B07D-18DF284D9BE6} = {FF430D75-CD8D-4685-999F-957491F4C785}
 	EndGlobalSection
 EndGlobal

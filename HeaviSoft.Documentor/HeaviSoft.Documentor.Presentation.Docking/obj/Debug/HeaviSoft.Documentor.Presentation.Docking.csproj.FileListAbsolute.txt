@@ -1,7 +1,12 @@
 E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Presentation.Docking.dll
 E:\Github\Documentor_V01R01\HeaviSoft.Documentor\bin\HeaviSoft.Documentor.Presentation.Docking.pdb
-E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking.csprojResolveAssemblyReference.cache
 E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking.Properties.Resources.resources
 E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking.csproj.GenerateResource.Cache
 E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking.dll
 E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\DockingMainWindow.g.cs
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking_MarkupCompile.cache
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking_MarkupCompile.lref
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\DockingMainWindow.baml
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking.g.resources
+E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\HeaviSoft.Documentor.Presentation.Docking.csprojResolveAssemblyReference.cache

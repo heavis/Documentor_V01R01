@@ -70,8 +70,6 @@ namespace HeaviSoft.FrameworkBase.Core
                 return false;
             if (!ExecuteLoginModulesCore())
                 return false;
-            //if (!ExecuteAutheticationModulesCore())
-            //   return false;
             if (!ExecuteAuthorizationModulesCore())
                 return false;
             if (!ExecuteExecutionModulesCore())

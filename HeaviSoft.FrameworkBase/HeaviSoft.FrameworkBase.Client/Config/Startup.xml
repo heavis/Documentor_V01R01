@@ -12,13 +12,11 @@ xmlns:xsi="http://tempuri.org/StartupSchema.xsd">
     </LoginModules>
     <AuthenticationModules>
       <Add xsi:Name="AuthenticationModule" xsi:Type="HeaviSoft.Documentor.Application.Security.AuthenticationModule, HeaviSoft.Documentor.Application.Security"  />
-      <!--<Add xsi:Name="AuthenticationModule" xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.AuthenticationModule, HeaviSoft.FrameworkBase.Test"  />-->
     </AuthenticationModules>
     <AuthorizationModules>
     </AuthorizationModules>
     <ExecutionModules>
-      <Add xsi:Type="HeaviSoft.Documentor.Presentation.Login.Implements.ExecutionModule, HeaviSoft.Documentor.Presentation.Login"/>
-      <!--<Add xsi:Name="ExecutionModule" xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.ExeutionModule, HeaviSoft.FrameworkBase.Test"/>-->
+      <Add xsi:Type="HeaviSoft.Documentor.Presentation.Docking.Implements.ExecutionModule, HeaviSoft.Documentor.Presentation.Docking"/>
     </ExecutionModules>
   </Startup.Modules>
 </Startup>

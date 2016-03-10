@@ -7,7 +7,7 @@
         xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component"
         mc:Ignorable="d"  Background="Transparent" WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True"   MouseLeftButtonDown="Window_PreviewMouseLeftButtonDown"
-        Title="LOGIN" Height="300" Width="480" ResizeMode="NoResize">
+        Title="LOGIN" Height="300" Width="480" ResizeMode="NoResize" Icon="images/icon.png">
     <Border  CornerRadius="5" Background="{DynamicResource Login_Background_Color}" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1" >
         <Grid Margin="30, 30, 30, 15">
             <Grid.RowDefinitions>

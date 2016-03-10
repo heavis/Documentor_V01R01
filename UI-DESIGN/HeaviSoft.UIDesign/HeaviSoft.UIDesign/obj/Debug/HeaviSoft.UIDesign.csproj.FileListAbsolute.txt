@@ -22,3 +22,5 @@ E:\Github\Documentor_V01R01\UI-DESIGN\HeaviSoft.UIDesign\HeaviSoft.UIDesign\obj\
 E:\Github\Documentor_V01R01\UI-DESIGN\HeaviSoft.UIDesign\HeaviSoft.UIDesign\obj\Debug\App.baml
 E:\Github\Documentor_V01R01\UI-DESIGN\HeaviSoft.UIDesign\HeaviSoft.UIDesign\obj\Debug\DockWindow.g.cs
 E:\Github\Documentor_V01R01\UI-DESIGN\HeaviSoft.UIDesign\HeaviSoft.UIDesign\obj\Debug\DockWindow.baml
+E:\Github\Documentor_V01R01\UI-DESIGN\HeaviSoft.UIDesign\HeaviSoft.UIDesign\obj\Debug\DockingWindow.g.cs
+E:\Github\Documentor_V01R01\UI-DESIGN\HeaviSoft.UIDesign\HeaviSoft.UIDesign\obj\Debug\DockingWindow.baml

@@ -17,7 +17,7 @@ xmlns:xsi="http://tempuri.org/StartupSchema.xsd">
     <AuthorizationModules>
     </AuthorizationModules>
     <ExecutionModules>
-      <Add xsi:Type="HeaviSoft.Documentor.Presentation.Login.Implements.ExecutionModule, HeaviSoft.Documentor.Presentation.Login"/>
+      <Add xsi:Type="HeaviSoft.Documentor.Presentation.Docking.Implements.ExecutionModule, HeaviSoft.Documentor.Presentation.Docking"/>
       <!--<Add xsi:Name="ExecutionModule" xsi:Type="HeaviSoft.FrameworkBase.Test.Implemnents.ExeutionModule, HeaviSoft.FrameworkBase.Test"/>-->
     </ExecutionModules>
   </Startup.Modules>

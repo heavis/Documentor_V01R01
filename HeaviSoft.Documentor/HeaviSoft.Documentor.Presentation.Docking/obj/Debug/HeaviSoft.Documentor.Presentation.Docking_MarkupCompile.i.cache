@@ -1,7 +1,7 @@
 ﻿HeaviSoft.Documentor.Presentation.Docking
 
 
-winexe
+library
 C#
 .cs
 E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\obj\Debug\
@@ -9,12 +9,12 @@ HeaviSoft.Documentor.Presentation.Docking
 none
 false
 DEBUG;TRACE
-E:\Github\Documentor_V01R01\HeaviSoft.Documentor\HeaviSoft.Documentor.Presentation.Docking\App.xaml
-11151548125
 
-9892778099
-13-1142990016
-MainWindow.xaml;
+1-208915297
 
-True
+9356370500
+151292407071
+DockingMainWindow.xaml;
+
+False
 

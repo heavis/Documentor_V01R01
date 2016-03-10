@@ -32,7 +32,6 @@
         </Setter>
     </Style>
     <Style TargetType="Button" BasedOn="{StaticResource ButonStyle}" />
-
     <!-- Default Button Style -->
     <Style x:Key="DefaultButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource ButonStyle}">
         <Setter Property="Background" Value="{DynamicResource DefaultButtonBackgroundColorBusrh}" />
@@ -42,5 +41,32 @@
                 <Setter Property="Background" Value="{DynamicResource DefaultButtonLightBackgroundColorBusrh}" />
             </Trigger>
         </Style.Triggers>
+    </Style>
+
+    <!-- Image Button Style -->
+    <Style x:Key="ImageButtonStyle" TargetType="{x:Type ButtonBase}">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="BorderThickness" Value="0" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderThickness" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              RecognizesAccessKey="True" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

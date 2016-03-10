@@ -1,0 +1,105 @@
+﻿<control:CustomWindow x:Class="HeaviSoft.Documentor.Presentation.Docking.DockingMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeaviSoft.Documentor.Presentation.Docking"
+        mc:Ignorable="d" WindowState="Maximized" Style="{DynamicResource WindowStyle}"
+        Title="Docking" Height="600" Width="800" 
+        xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component">
+    <control:CustomWindow.Resources>
+    </control:CustomWindow.Resources>
+    <DockPanel>
+        <StackPanel Name="PART_DOCKING_RIGHT" Orientation="Horizontal" DockPanel.Dock="Right">
+            <StackPanel.LayoutTransform>
+                <RotateTransform Angle="90" />
+            </StackPanel.LayoutTransform>
+            <Button Padding="5, 3" Margin="0, 0, 5, 0" Style="{DynamicResource ButonStyle}" Name="PART_DOCKING_RIGHT_BTN1" MouseEnter="PART_DOCKING_RIGHT_BTN1_MouseEnter" Content="Tool Property"></Button>
+            <Button Padding="5, 3" Margin="0, 0, 5, 0"  Style="{DynamicResource ButonStyle}" Name="PART_DOCKING_RIGHT_BTN2" MouseEnter="PART_DOCKING_RIGHT_BTN2_MouseEnter" Content="Solution Property"></Button>
+        </StackPanel>
+        <!-- PART_PARENT_GRID: 包含三个子Grid填充DockPanel-->
+        <Grid Name="PART_PARENT_GRID" Grid.IsSharedSizeScope="True">
+
+            <!-- Layout: 0-->
+            <Grid Name="PART_LAYOUT0" MouseEnter="PART_LAYOUT0_MouseEnter">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <control:CustomTabControl Grid.Column="0">
+                    <control:CustomTabItem Header="file1.txt">
+                        dfdddfdfdfdfdfdf
+                    </control:CustomTabItem>
+                    <control:CustomTabItem Header="file2.txt">
+                        dfdfddfdfddfdfdfdfdff
+                    </control:CustomTabItem>
+                </control:CustomTabControl>
+            </Grid>
+
+            <!-- Layout: 1-->
+            <Grid Name="PART_LAYOUT1" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" SharedSizeGroup="PART_LAYOUT1_COLUMN1" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Col0为空-->
+                <!-- Col1包含一个Grid和GridSplitter -->
+                <Border  Background="{DynamicResource CustomControlBackground}" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1"  Grid.Column="1">
+                    <Grid  MouseEnter="PART_LAYOUT1_MouseEnter">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Row0包含Header -->
+                        <!-- Row1包含自定义的内容 -->
+                        <DockPanel Background="{DynamicResource Tab_Item_Background_Normal}" Grid.Row="0">
+                            <Button Style="{DynamicResource ImageButtonStyle}" Name="PART_LAYOUT1_PIN_BTN" Click="PART_LAYOUT1_PIN_BTN_Click" Width="26" DockPanel.Dock="Right">
+                                <Image Name="PART_LAYOUT1_PIN_IMAGE" Source="Images/pin_horizontal.png" Width="16" Height="16" Margin="5, 3" />
+                            </Button>
+                            <TextBlock Padding="8" Text="Tool Property" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" DockPanel.Dock="Left"></TextBlock>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Label Content="Layout1 Cntrol" />
+                        </Grid>
+                    </Grid>
+                </Border>
+                <!-- GridSplitter-->
+                <GridSplitter Width="3" Background="Transparent" Grid.Column="1" HorizontalAlignment="Left"/>
+            </Grid>
+
+            <!-- Layout: 2-->
+            <Grid  Name="PART_LAYOUT2"  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" SharedSizeGroup="PART_LAYOUT2_COLUMN2" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Col0为空-->
+                <!-- Col1包含一个Grid和GridSplitter -->
+                <Border  Background="{DynamicResource CustomControlBackground}" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1"  Grid.Column="1">
+                    <Grid  MouseEnter="PART_LAYOUT2_MouseEnter">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Row0包含Header -->
+                        <!-- Row1包含自定义的内容 -->
+                        <DockPanel Background="{DynamicResource Tab_Item_Background_Normal}" Grid.Row="0">
+                            <Button Style="{DynamicResource ImageButtonStyle}" Name="PART_LAYOUT2_PIN_BTN" Click="PART_LAYOUT2_PIN_BTN_Click" Width="26" DockPanel.Dock="Right">
+                                <Image Name="PART_LAYOUT2_PIN_IMAGE" Source="Images/pin_horizontal.png" Width="16" Height="16"  Margin="5, 3"/>
+                            </Button>
+                            <TextBlock Padding="8" Text="Soluntion Property" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" DockPanel.Dock="Left"></TextBlock>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Label Content="Layout2 Cntrol" />
+                        </Grid>
+                    </Grid>
+                </Border>
+                <!-- GridSplitter-->
+                <GridSplitter Background="Transparent" Width="3" Grid.Column="1" HorizontalAlignment="Left"/>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</control:CustomWindow>

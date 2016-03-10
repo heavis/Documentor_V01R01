@@ -1,0 +1,88 @@
+﻿<Window x:Class="HeaviSoft.UIDesign.DockingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeaviSoft.UIDesign"
+        mc:Ignorable="d"
+        Title="DockingWindow" Height="300" Width="300">
+    <DockPanel>
+        <StackPanel Name="PART_DOCKING_RIGHT" Orientation="Horizontal" DockPanel.Dock="Right">
+            <StackPanel.LayoutTransform>
+                <RotateTransform Angle="90" />
+            </StackPanel.LayoutTransform>
+            <Button Name="PART_DOCKING_RIGHT_BTN1" MouseEnter="PART_DOCKING_RIGHT_BTN1_MouseEnter" Content="Tool Property"></Button>
+            <Button Name="PART_DOCKING_RIGHT_BTN2" MouseEnter="PART_DOCKING_RIGHT_BTN2_MouseEnter" Content="Solution Property"></Button>
+        </StackPanel>
+        <!-- PART_PARENT_GRID: 包含三个子Grid填充DockPanel-->
+        <Grid Name="PART_PARENT_GRID" Grid.IsSharedSizeScope="True">
+            
+           <!-- Layout: 0-->
+            <Grid Background="White" Name="PART_LAYOUT0" MouseEnter="PART_LAYOUT0_MouseEnter">
+               
+            </Grid>
+            
+            <!-- Layout: 1-->
+            <Grid Name="PART_LAYOUT1" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" SharedSizeGroup="PART_LAYOUT1_COLUMN1" />
+                </Grid.ColumnDefinitions>
+                
+                <!-- Col0为空-->
+                <!-- Col1包含一个Grid和GridSplitter -->
+                <Grid Background="Red"  Grid.Column="1" MouseEnter="PART_LAYOUT1_MouseEnter">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <!-- Row0包含Header -->
+                    <!-- Row1包含自定义的内容 -->
+                    <DockPanel Grid.Row="0">
+                        <Button Name="PART_LAYOUT1_PIN_BTN" Click="PART_LAYOUT1_PIN_BTN_Click" Width="26" DockPanel.Dock="Right">
+                            <Image Name="PART_LAYOUT1_PIN_IMAGE" Source="pin.png" Width="15" Height="15" />
+                        </Button>
+                        <TextBlock Padding="8" Text="Tool Property" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" DockPanel.Dock="Left"></TextBlock>
+                    </DockPanel>
+                    <Grid Grid.Row="1">
+                        <Label Content="Layout1 Cntrol" />
+                    </Grid>
+                </Grid>
+                <!-- GridSplitter-->
+                <GridSplitter Width="5" Grid.Column="1" HorizontalAlignment="Left"/>
+            </Grid>
+            
+            <!-- Layout: 2-->
+            <Grid  Name="PART_LAYOUT2"  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" SharedSizeGroup="PART_LAYOUT2_COLUMN2" />
+                </Grid.ColumnDefinitions>
+                
+                <!-- Col0为空-->
+                <!-- Col1包含一个Grid和GridSplitter -->
+                <Grid Background="Green" Grid.Column="1" MouseEnter="PART_LAYOUT2_MouseEnter">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <!-- Row0包含Header -->
+                    <!-- Row1包含自定义的内容 -->
+                    <DockPanel Grid.Row="0">
+                        <Button Name="PART_LAYOUT2_PIN_BTN" Click="PART_LAYOUT2_PIN_BTN_Click" Width="26" DockPanel.Dock="Right">
+                            <Image Name="PART_LAYOUT2_PIN_IMAGE" Source="pin.png" Width="15" Height="15" />
+                        </Button>
+                        <TextBlock Padding="8" Text="Soluntion Property" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" DockPanel.Dock="Left"></TextBlock>
+                    </DockPanel>
+                    <Grid Grid.Row="1">
+                        <Label Content="Layout2 Cntrol" />
+                    </Grid>
+                </Grid>
+                <!-- GridSplitter-->
+                <GridSplitter Width="5" Grid.Column="1" HorizontalAlignment="Left"/>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>

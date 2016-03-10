@@ -1,0 +1,10 @@
+2016-02-25 00:12:04,265 [1] [ERROR] [default]  - Error occured during appication start-up.
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 HeaviSoft.FrameworkBase.Client.ExtendedApplication.ExecuteExecutionModulesCore() 位置 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\ExtendedApplication.cs:行号 281
+   在 HeaviSoft.FrameworkBase.Core.ExtendedApplicationBase.ExecuteSteps() 位置 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Core\ExtendedApplicationBase.cs:行号 77
+   在 HeaviSoft.FrameworkBase.Client.ExtendedApplication.OnStartup(StartupEventArgs e) 位置 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\ExtendedApplication.cs:行号 44
+2016-02-25 00:40:20,490 [1] [ERROR] [default]  - Unknown error.
+System.Windows.ResourceReferenceKeyNotFoundException: 未找到“”资源。
+   在 MS.Internal.Helper.FindResourceHelper.DoTryCatchWhen(Object arg)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)

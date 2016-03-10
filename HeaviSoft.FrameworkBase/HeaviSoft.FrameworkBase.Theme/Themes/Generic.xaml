@@ -8,5 +8,9 @@
         <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/Button.xaml" />
         <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/MessageBox.xaml" />
         <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/CustomWindow.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/CustomTabItem.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/CustomTabControl.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/CustomLayoutPanel.xaml" />
+        <ResourceDictionary Source="/HeaviSoft.FrameworkBase.Theme;component/CustomControl/CustomDockLayoutManager.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

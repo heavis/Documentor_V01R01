@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HeaviSoft.Documentor.Persistence.Repository\HeaviSoft.Documentor.Persistence.Repository.csproj">
+      <Project>{2448e6f9-4f56-4291-9631-d9f09d310e5e}</Project>
+      <Name>HeaviSoft.Documentor.Persistence.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HeaviSoft.Documentor.Persistence.STSdb\HeaviSoft.Documentor.Persistence.STSdb.csproj">
       <Project>{1754d7df-52e7-4964-959f-273c9c89d75f}</Project>
       <Name>HeaviSoft.Documentor.Persistence.STSdb</Name>

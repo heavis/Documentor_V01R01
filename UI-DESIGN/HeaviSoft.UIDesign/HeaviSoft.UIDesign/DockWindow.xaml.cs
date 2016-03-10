@@ -23,5 +23,14 @@ namespace HeaviSoft.UIDesign
         {
             InitializeComponent();
         }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var tabControl = (TabControl)TItem1.Parent;
+            if(tabControl != null)
+            {
+                tabControl.Items.Remove(TItem1);
+            }
+        }
     }
 }

@@ -1,15 +1,13 @@
 ﻿using HeaviSoft.Documentor.Persistence.Repository;
-using HeaviSoft.Documentor.Persistence.STSdb.DataEntity;
 using STSdb4.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace HeaviSoft.Documentor.Persistence.STSdb
 {
-    public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : DbEntity
+    public abstract class RepositoryBase<TKey, TEntity> : IRepositoryBase<TKey, TEntity> where TEntity : IHasKeyEntity<TKey>
     {
         private DbContext _context;
 
@@ -30,31 +28,26 @@ namespace HeaviSoft.Documentor.Persistence.STSdb
         public void Add(TEntity entity)
         {
             var table = GetTable();
-            var key = new Guid();
-            table[key] = entity;
+            table[CreateKey()] = entity;
 
             DbContext.Context.Commit();
         }
 
-        public void Delete(object id)
+        public void Delete(TKey id)
         {
             if(!(id is Guid))
             {
                 throw new ArgumentException(" argument:id must be type of Guid");
             }
 
-            GetTable().Delete((Guid)id);
+            GetTable().Delete(id);
 
             DbContext.Context.Commit();
         }
 
-        public TEntity FindById(object id)
+        public TEntity FindById(TKey id)
         {
-            if (!(id is Guid))
-            {
-                throw new ArgumentException(" argument:id must be type of Guid");
-            }
-            var pair = GetTable().FirstOrDefault(pr => pr.Key == ((Guid)id));
+            var pair = GetTable().FirstOrDefault(pr => pr.Key.Equals(id));
             if(pair.Value != null)
             {
                 pair.Value.Key = pair.Key;
@@ -93,9 +86,11 @@ namespace HeaviSoft.Documentor.Persistence.STSdb
         /// 获取实体表
         /// </summary>
         /// <returns></returns>
-        private ITable<Guid, TEntity> GetTable()
+        private ITable<TKey, TEntity> GetTable()
         {
-            return DbContext.Context.OpenXTable<Guid, TEntity>(typeof(TEntity).Name);
+            return DbContext.Context.OpenXTable<TKey, TEntity>(typeof(TEntity).Name);
         }
+
+        public abstract TKey CreateKey();
     }
 }

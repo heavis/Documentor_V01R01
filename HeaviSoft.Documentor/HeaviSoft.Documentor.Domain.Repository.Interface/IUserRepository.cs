@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HeaviSoft.Documentor.Domain.Repository.Interface
 {
-    public interface IUserRepository : IRepositoryBase<User>
+    public interface IUserRepository : IRepositoryBase<long, User>
     {
         User GetUserByName(string name);
     }

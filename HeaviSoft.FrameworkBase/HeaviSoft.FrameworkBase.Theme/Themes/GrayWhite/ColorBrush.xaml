@@ -38,4 +38,9 @@
     <BitmapImage x:Key="Window_Button_Min_ImageBrush" UriSource="Images/Window/min.png" />
     <BitmapImage x:Key="Window_Button_Max_ImageBrush" UriSource="Images/Window/max.png" />
     <BitmapImage x:Key="Window_Button_Maximum_ImageBrush" UriSource="Images/Window/maximum.png" />
+    <!-- Tab Control Style -->
+    <SolidColorBrush x:Key="Tab_Control_Background_Normal" Color="#293855" />
+    <SolidColorBrush x:Key="Tab_Item_Background_Normal" Color="#364e70" />
+    <SolidColorBrush x:Key="Tab_Item_Background_MouseOver" Color="#5b719a" />
+    <SolidColorBrush x:Key="Tab_Item_Backgound_Selected" Color="#fef29c" />
 </ResourceDictionary>

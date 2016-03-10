@@ -208,7 +208,7 @@ namespace HeaviSoft.FrameworkBase.Component
         {
             T control = GetTemplateChild(controlName) as T;
             return control;
-        }
+        }   
 
 
 

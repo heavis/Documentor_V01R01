@@ -54,12 +54,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DockingWindow.xaml.cs">
+      <DependentUpon>DockingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DockWindow.xaml.cs">
       <DependentUpon>DockWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestMessageBox.xaml.cs">
       <DependentUpon>TestMessageBox.xaml</DependentUpon>
     </Compile>
+    <Page Include="DockingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DockWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="text_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pin_horizontal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

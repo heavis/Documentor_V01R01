@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HeaviSoft.Documentor.Domain.Repository
 {
-    public class UserRepository : RepositoryBase<User>, IUserRepository
+    public class UserRepository : RepositoryBase<long, User>, IUserRepository
     {
         public UserRepository(DbContext context) : base(context)
         {
@@ -18,7 +18,12 @@ namespace HeaviSoft.Documentor.Domain.Repository
 
         public User GetUserByName(string name)
         {
-            return DbContext.Context.OpenXTable<Guid, User>().Where( pair => pair.Value.Name == name).FirstOrDefault().Value;
+            return DbContext.Context.OpenXTable<long, User>().Where( pair => pair.Value.Name == name).FirstOrDefault().Value;
+        }
+
+        public override long CreateKey()
+        {
+            return DbContext.Context.OpenXTable<long, User>().Max(pair => pair.Key) + 1;
         }
     }
 }

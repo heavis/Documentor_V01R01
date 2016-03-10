@@ -1,0 +1,87 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component" 
+                    xmlns:docking="clr-namespace:HeaviSoft.FrameworkBase.Component.Docking;assembly=HeaviSoft.FrameworkBase.Component">
+    <Style x:Key="DockingButonStyle" TargetType="{x:Type Button}">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundColorBusrh}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource CustomControlBorderBrush}" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="{DynamicResource Window_Font_Color}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ButtonLightBackgroundColorBusrh}"/>
+                            <Setter Property="BorderThickness" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderThickness" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                    <Border Background="{TemplateBinding Background}" CornerRadius="5, 5, 0, 0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              RecognizesAccessKey="True" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CustomDockLayoutManagerStyle" TargetType="{x:Type docking:CustomDockLayoutManager}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type docking:CustomDockLayoutManager}">
+                    <DockPanel>
+                        <StackPanel Name="PART_DOCKING_RIGHT" Orientation="Horizontal" DockPanel.Dock="Right">
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DockingButonStyle}">
+                                    <Setter Property="Padding" Value="10, 3" />
+                                    <Setter Property="Margin" Value="0, 0, 5, 0" />
+                                </Style>
+                            </StackPanel.Resources>
+                            <StackPanel.LayoutTransform>
+                                <RotateTransform Angle="90" />
+                            </StackPanel.LayoutTransform>
+                        </StackPanel>
+                        <!-- PART_PARENT_GRID: 包含三个子Grid填充DockPanel-->
+                        <Grid Name="PART_PARENT_GRID" Grid.IsSharedSizeScope="True">
+
+                            <!-- Layout: 0-->
+                            <Grid Name="PART_LAYOUT0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <control:CustomTabControl Name="PART_LAYOUT0_TABCONTROL" Grid.Column="0">
+                                </control:CustomTabControl>
+                            </Grid>
+
+                            <!-- Layout: 1-->
+                            <Grid Name="PART_LAYOUT1" Visibility="Collapsed">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto" SharedSizeGroup="PART_LAYOUT1_COLUMN1" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Col0为空-->
+                                <!-- Col1包含一个Grid和GridSplitter -->
+                                <Border  Background="{DynamicResource CustomControlBackground}" BorderBrush="{DynamicResource CustomControlBorderBrush}" BorderThickness="1"  Grid.Column="1">
+                                    <control:CustomTabControl Name="PART_LAYOUT1_TABCONTROL" TabStripPlacement="Bottom">
+                                    </control:CustomTabControl>
+                                </Border>
+                                <!-- GridSplitter-->
+                                <GridSplitter Width="3" Background="Transparent" Grid.Column="1" HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Grid>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    
+    </Style>
+    <Style TargetType="{x:Type docking:CustomDockLayoutManager}" BasedOn="{StaticResource CustomDockLayoutManagerStyle}" />
+</ResourceDictionary>

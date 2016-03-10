@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataEntity\DbEntity.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="Extension\StorageEngineEx.cs" />
     <Compile Include="RepositoryBase.cs" />

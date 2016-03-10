@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeaviSoft.Documentor.Persistence.Repository
 {
-    public interface IRepositoryBase<TEntity> where TEntity : class
+    public interface IRepositoryBase<TKey, TEntity> where TEntity : IHasKeyEntity<TKey>
     {
         /// <summary>
         /// 获取所有TEntity
@@ -19,7 +19,7 @@ namespace HeaviSoft.Documentor.Persistence.Repository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        TEntity FindById(object id);
+        TEntity FindById(TKey id);
 
         /// <summary>
         /// 添加TEntity
@@ -31,7 +31,7 @@ namespace HeaviSoft.Documentor.Persistence.Repository
         /// 删除TEntity
         /// </summary>
         /// <param name="id"></param>
-        void Delete(object id);
+        void Delete(TKey id);
 
         /// <summary>
         /// 更新TEntity
@@ -43,5 +43,7 @@ namespace HeaviSoft.Documentor.Persistence.Repository
         /// 保存更新
         /// </summary>
         void Save();
+
+        TKey CreateKey();
     }
 }

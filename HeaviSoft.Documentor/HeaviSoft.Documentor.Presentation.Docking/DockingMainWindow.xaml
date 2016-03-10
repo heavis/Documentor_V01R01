@@ -1,0 +1,35 @@
+﻿<control:CustomWindow x:Class="HeaviSoft.Documentor.Presentation.Docking.DockingMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeaviSoft.Documentor.Presentation.Docking"
+        mc:Ignorable="d" WindowState="Maximized" Style="{DynamicResource WindowStyle}"
+        Title="Docking" Height="600" Width="800" Icon="Images/icon.png"
+        xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component" 
+        xmlns:docking="clr-namespace:HeaviSoft.FrameworkBase.Component.Docking;assembly=HeaviSoft.FrameworkBase.Component" >
+    <Grid>
+        <docking:CustomDockLayoutManager>
+            <docking:CustomDockLayoutManager.CustomLayoutGroup>
+                <docking:CustomLayoutGroup>
+                    <docking:CustomLayoutPanel Caption="test1.txt">
+                        <Label>我是test1.txt的内容</Label>
+                    </docking:CustomLayoutPanel>
+                    <docking:CustomLayoutPanel Caption="test2.txt">
+                        <Label>我是test2.txt的内容</Label>
+                    </docking:CustomLayoutPanel>
+                </docking:CustomLayoutGroup>
+            </docking:CustomDockLayoutManager.CustomLayoutGroup>
+            <docking:CustomDockLayoutManager.CustomDocumentGroup>
+                <docking:CustomDocumentGroup>
+                    <docking:CustomDocumentPanel Caption="document1">
+                        <Label>我是document1的内容</Label>
+                    </docking:CustomDocumentPanel>
+                    <docking:CustomDocumentPanel Caption="document2">
+                        <Label>我是document2的内容</Label>
+                    </docking:CustomDocumentPanel>
+                </docking:CustomDocumentGroup>
+            </docking:CustomDockLayoutManager.CustomDocumentGroup>
+        </docking:CustomDockLayoutManager>
+    </Grid>
+</control:CustomWindow>

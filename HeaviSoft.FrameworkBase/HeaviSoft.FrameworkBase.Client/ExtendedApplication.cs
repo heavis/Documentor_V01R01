@@ -35,7 +35,7 @@ namespace HeaviSoft.FrameworkBase.Client
         protected override void OnStartup(StartupEventArgs e)
         {
             //注册事件
-            this.DispatcherUnhandledException += ExtendedApplication_DispatcherUnhandledException;
+            RegistEvent();
             //开始构建步骤
             try
             {
@@ -54,6 +54,22 @@ namespace HeaviSoft.FrameworkBase.Client
             }
         }
 
+        private void RegistEvent()
+        {
+            //捕获UI线程
+            this.DispatcherUnhandledException += ExtendedApplication_DispatcherUnhandledException;
+            //捕获其他线程异常
+            TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
+        }
+
+
+        private void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
+        {
+            //写日志
+            Logger.Error("Unknown error.", e.Exception);
+            //处理异常
+        }
+
         /// <summary>
         /// 未捕获的异常
         /// </summary>
@@ -62,15 +78,19 @@ namespace HeaviSoft.FrameworkBase.Client
         private void ExtendedApplication_DispatcherUnhandledException(object sender,
             System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
-            //写日志
-            Logger.Error("Unknown error.", e.Exception);
+            HandleUnKnownExcpetion(e.Exception);
+        }
 
+        private void HandleUnKnownExcpetion(Exception e)
+        {
+            //写日志
+            Logger.Error("Unknown error.", e);
             //启动过程中发生了异常。
-            if (e.Exception is StartupException)
+            if (e is StartupException)
             {
                 //启动异常提示
             }
-            else if (e.Exception is FatalException)
+            else if (e is FatalException)
             {
                 //中断异常提示
             }
@@ -78,14 +98,6 @@ namespace HeaviSoft.FrameworkBase.Client
             {
                 //其他异常
             }
-        }
-
-        /// <summary>
-        /// 应用关闭
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnExit(ExitEventArgs e)
-        {
         }
 
         #endregion

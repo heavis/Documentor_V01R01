@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-72069003536
+11-1708755261
 
 51701674314
 14-1953291483
-CustomControl\MessageBox.xaml;CustomControl\CustomWindow.xaml;Themes\Generic.xaml;CustomControl\Button.xaml;CustomControl\TextBox.xaml;Themes\GrayWhite\Text.xaml;Themes\GrayWhite\ColorBrush.xaml;
+CustomControl\CustomLayoutPanel.xaml;CustomControl\CustomDockLayoutManager.xaml;CustomControl\CustomTabControl.xaml;CustomControl\CustomTabItem.xaml;CustomControl\MessageBox.xaml;CustomControl\CustomWindow.xaml;Themes\Generic.xaml;CustomControl\Button.xaml;CustomControl\TextBox.xaml;Themes\GrayWhite\Text.xaml;Themes\GrayWhite\ColorBrush.xaml;
 
-True
+False
 

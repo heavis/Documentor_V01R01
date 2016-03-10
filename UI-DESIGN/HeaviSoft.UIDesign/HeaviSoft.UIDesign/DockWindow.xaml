@@ -6,6 +6,21 @@
         xmlns:local="clr-namespace:HeaviSoft.UIDesign"
         mc:Ignorable="d"
         Title="DockWindow" Height="600" Width="800" Padding="10">
+    <Window.Resources>
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="False">
+                            <Image Width="18" Height="18" Source="text_file.png" DockPanel.Dock="Left" />
+                            <Label Content="{Binding}" DockPanel.Dock="Left" />
+                            <Image MouseLeftButtonDown="Image_MouseLeftButtonDown" Width="15" Height="15" Source="login-close.png" DockPanel.Dock="Right"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <DockPanel Margin="5" LastChildFill="True">
         <!-- Docking Panel -->
         <Border DockPanel.Dock="Right" BorderBrush="Gray" BorderThickness="1" Margin="3">
@@ -23,26 +38,11 @@
             </Grid>
         </Border>
         <!-- Document Panel -->
-        <TabControl Grid.Column="0" Margin="3">
-            <TabItem>
-                <TabItem.Header>
-                    <DockPanel LastChildFill="False">
-                        <Image Width="18" Height="18" Source="text_file.png" DockPanel.Dock="Left" />
-                        <Label Content="docking.txt" DockPanel.Dock="Left" />
-                        <Image Width="15" Height="15" Source="login-close.png" DockPanel.Dock="Right"/>
-                    </DockPanel>
-                </TabItem.Header>
+        <TabControl TabStripPlacement="Left" Name="TControl" Grid.Column="0" Margin="3">
+            <TabItem Name="TItem1" Header="docking1.txt">
             </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <DockPanel LastChildFill="False">
-                        <Image Width="18" Height="18" Source="text_file.png" DockPanel.Dock="Left" />
-                        <Label Content="docking.txt" DockPanel.Dock="Left" />
-                        <Image Width="15" Height="15" Source="login-close.png" DockPanel.Dock="Right"/>
-                    </DockPanel>
-                </TabItem.Header>
+            <TabItem Header="docking2.txt">
             </TabItem>
         </TabControl>
-       
     </DockPanel>
 </Window>

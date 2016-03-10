@@ -55,7 +55,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Docking\CustomDockLayoutManager.cs" />
     <Compile Include="CustomMessageBox.cs" />
+    <Compile Include="CustomTabControl.cs" />
+    <Compile Include="CustomTabItem.cs" />
+    <Compile Include="Docking\CustomDocumentGroup.cs" />
+    <Compile Include="Docking\CustomDocumentPanel.cs" />
+    <Compile Include="Docking\CustomLayoutGroup.cs" />
+    <Compile Include="Docking\CustomLayoutPanel.cs" />
     <Compile Include="MessageBoxHelper.cs" />
     <Compile Include="CustomPasswordBox.cs" />
     <Compile Include="CustomTextBox.cs" />
@@ -84,6 +91,14 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\CustomTabItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\CustomTabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\CustomTextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,6 +115,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\Images\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\Images\pin_horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeaviSoft.FrameworkBase.Utility\HeaviSoft.FrameworkBase.Utility.csproj">
+      <Project>{2644b5ae-4ff1-4e61-86d0-8627616f69f8}</Project>
+      <Name>HeaviSoft.FrameworkBase.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeaviSoft.Documentor.Persistence.STSdb.DataEntity
+namespace HeaviSoft.Documentor.Persistence.Repository
 {
-    public abstract class DbEntity
+    public interface IHasKeyEntity<TKey>
     {
-        public Guid Key { get; set; }
+        TKey Key { get; set; }
     }
 }
