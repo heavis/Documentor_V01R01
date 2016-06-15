@@ -1,0 +1,12 @@
+2016-03-13 14:43:10,234 [8] [ERROR] [default]  - Error occured during appication start-up.
+HeaviSoft.FrameworkBase.Core.ExpcetionEx.StartupException: Error occured when executing CreateInstanceByType method, parameter:HeaviSoft.Documentor.Theme.Implements.ThemeModule, HeaviSoft.Documentor.Theme ---> System.IO.FileNotFoundException: 未能加载文件或程序集“file:///E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\Bin\HeaviSoft.Documentor.Theme.exe”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 HeaviSoft.FrameworkBase.Client.ExtendedApplication.CreateInstanceByType[T](String typeInfo) 位置 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\ExtendedApplication.cs:行号 314
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 HeaviSoft.FrameworkBase.Client.ExtendedApplication.CreateInstanceByType[T](String typeInfo) 位置 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\ExtendedApplication.cs:行号 321
+   在 HeaviSoft.FrameworkBase.Client.ExtendedApplication.BuildSteps() 位置 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\ExtendedApplication.cs:行号 137
+   在 HeaviSoft.FrameworkBase.Client.ExtendedApplication.OnStartup(StartupEventArgs e) 位置 E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Client\ExtendedApplication.cs:行号 42

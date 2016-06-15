@@ -16,5 +16,5 @@ DEBUG;TRACE
 15-1232135604
 MainWindow.xaml;TestCustomWindow.xaml;TestMessageBox.xaml;Themes\Generic.xaml;
 
-False
+True
 

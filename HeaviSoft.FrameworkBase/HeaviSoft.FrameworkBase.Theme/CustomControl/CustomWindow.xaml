@@ -2,8 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:HeaviSoft.FrameworkBase.Theme" 
                     xmlns:control="clr-namespace:HeaviSoft.FrameworkBase.Component;assembly=HeaviSoft.FrameworkBase.Component">
-    <ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary.MergedDictionaries>
     <Storyboard x:Key="TitleButtonStoryboard" RepeatBehavior="1x">
         <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" >
             <SplineDoubleKeyFrame KeyTime="0:0:0.0" Value="0"/>

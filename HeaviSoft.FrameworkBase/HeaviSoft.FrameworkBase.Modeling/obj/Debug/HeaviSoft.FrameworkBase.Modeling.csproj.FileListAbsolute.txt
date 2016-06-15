@@ -1,0 +1,4 @@
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Modeling\bin\Debug\HeaviSoft.FrameworkBase.Modeling.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Modeling\bin\Debug\HeaviSoft.FrameworkBase.Modeling.pdb
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Modeling\obj\Debug\HeaviSoft.FrameworkBase.Modeling.dll
+E:\Github\Documentor_V01R01\HeaviSoft.FrameworkBase\HeaviSoft.FrameworkBase.Modeling\obj\Debug\HeaviSoft.FrameworkBase.Modeling.pdb

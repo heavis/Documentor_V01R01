@@ -23,7 +23,17 @@
             <docking:CustomDockLayoutManager.CustomDocumentGroup>
                 <docking:CustomDocumentGroup>
                     <docking:CustomDocumentPanel Caption="document1">
-                        <Label>我是document1的内容</Label>
+                        <TextBlock Width="200" TextWrapping="Wrap">最近都没怎么写博客，主要是最近在看WPF方面的书《wpf-4-unleashed.pdf》，\n
+                            挑了比较重要的几个章节学习了下WPF基础技术。另外，也把这本书推荐给目前正在从事WPF开发的程序猿。\n 
+                            现在书看完了也该实践实践，写了个WPF项目，主要以界面框架为主。  最近的几篇博客也主要围绕这个WPF项目，\n
+                            介绍下WPF搭建界面框架以及怎样写自定义的Windows界面和控件。
+
+                            这也许是写最后几篇关于.Net技术的博客。做.Net开发也快五年了，感觉自己搞得不温不火，另外工作中正好有一个机会转做前段开发。\n
+                            稳稳当当的做年几年.Net开发，也想给自己一个挑战的机会。所以这几篇博客完成后，更多的可能是涉及前段开发。
+
+                            雷军通知常常爱说：不忘初心，不忘初心、，不忘初心。重要的事说三遍。走在程序猿的路上，别忘了自己的初心，\n
+                            是做一个牛逼的程序猿呢还是做一个非常牛逼的程序猿呢？come on-打着鸡血一般的奋斗吧！
+                        </TextBlock>
                     </docking:CustomDocumentPanel>
                     <docking:CustomDocumentPanel Caption="document2">
                         <Label>我是document2的内容</Label>

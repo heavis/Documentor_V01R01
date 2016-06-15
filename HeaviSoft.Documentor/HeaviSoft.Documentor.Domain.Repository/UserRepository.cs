@@ -18,12 +18,18 @@ namespace HeaviSoft.Documentor.Domain.Repository
 
         public User GetUserByName(string name)
         {
-            return DbContext.Context.OpenXTable<long, User>().Where( pair => pair.Value.Name == name).FirstOrDefault().Value;
+            return DbContext.Context.OpenXTable<long, User>( ).FirstOrDefault(pair => pair.Value.Name == name).Value;
         }
 
         public override long CreateKey()
         {
-            return DbContext.Context.OpenXTable<long, User>().Max(pair => pair.Key) + 1;
+            long key = 0;
+            var usrTable = DbContext.Context.OpenXTable<long, User>();
+            if (usrTable != null && usrTable.Any())
+            {
+                key = DbContext.Context.OpenXTable<long, User>().Max(pair => pair.Key);
+            }
+            return key + 1;
         }
     }
 }
